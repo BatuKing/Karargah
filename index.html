@@ -1,16 +1,16 @@
-<meta charset="utf-8"><pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="tr"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"&gt;
-&lt;meta name="theme-color" content="#0d0f12"&gt;
-&lt;meta name="color-scheme" content="dark"&gt;
-&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
-&lt;meta name="mobile-web-app-capable" content="yes"&gt;
-&lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
-&lt;meta name="apple-mobile-web-app-title" content="Karargâh"&gt;
-&lt;title&gt;Karargâh · Faz 1&lt;/title&gt;
-&lt;style&gt;
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d0f12">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Karargâh">
+<title>Karargâh · Faz 1</title>
+<style>
 :root{--bg:#0d0f12;--card:#161920;--raise:#1d212a;--line:#262b35;--line2:#343b49;--tx:#e8eaed;--mut:#9aa2b0;--dim:#636b7b;
 --gold:#d4af37;--goldD:rgba(212,175,55,.11);--goldL:rgba(212,175,55,.38);--steel:#3b82f6;--steelT:#8cb6ff;--steelD:rgba(59,130,246,.12);--steelL:rgba(59,130,246,.42);
 --red:#e5484d;--redT:#ff9a9d;--redD:rgba(229,72,77,.11);--redL:rgba(229,72,77,.5);
@@ -36,7 +36,7 @@ main{max-width:560px;margin:0 auto;padding:12px 12px calc(var(--sb) + 92px)}
 .tab{display:none}.tab.on{display:block}
 .sec{display:flex;align-items:center;gap:10px;margin:20px 2px 9px}.sec::after{content:"";flex:1;height:1px;background:var(--line)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-bottom:10px;position:relative}
-.row{display:flex;gap:8px}.row&gt;*{flex:1}.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row{display:flex;gap:8px}.row>*{flex:1}.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,12,15,.96);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:4px 0 calc(var(--sb) + 4px)}
 .tabbar-in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
 .tb{position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;padding:8px 0 7px;color:var(--dim);font:700 9.5px/1 var(--sans);letter-spacing:.16em}
@@ -65,7 +65,7 @@ button:active{transform:translateY(1px)}
 .wd .m{display:block;height:3px;margin:0 7px;background:var(--raise);overflow:hidden}.wd .m span{display:block;height:100%;background:var(--gold)}
 .wd .p{display:block;font:600 9.5px/1 var(--mono);color:var(--mut);margin-top:6px}.wd.sel{border-color:var(--gold);background:var(--goldD)}.wd.td .dd{color:var(--gold)}.wd:disabled{opacity:.3}
 .cum{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:12px}
-.cum&gt;div{background:var(--bg);padding:9px 10px}.cum b{display:block;font:700 15px/1.1 var(--mono);margin-top:5px}.cum .lbl{font-size:9px}
+.cum>div{background:var(--bg);padding:9px 10px}.cum b{display:block;font:700 15px/1.1 var(--mono);margin-top:5px}.cum .lbl{font-size:9px}
 .mcard{border-top:2px solid var(--gold)}.acc{display:flex;align-items:center;gap:12px;width:100%}.acc .at{flex:1}
 .acc .at b{display:block;font:800 13px/1.2 var(--sans);letter-spacing:.14em;margin-top:5px}
 .chev{width:18px;height:18px;fill:none;stroke:var(--mut);stroke-width:2;transition:transform .2s}.mcard.open .chev{transform:rotate(180deg)}
@@ -87,7 +87,7 @@ button:active{transform:translateY(1px)}
 .stk{text-align:right;min-width:44px}.stk b{display:block;font:700 26px/1 var(--mono);color:var(--dim)}.stk.on b{color:var(--gold)}
 .stk span{display:block;font:700 8.5px/1 var(--sans);letter-spacing:.18em;color:var(--dim);margin-top:5px}
 .tg{display:grid;gap:8px;margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
-.tg&gt;div{display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:13px;line-height:1.45;color:#ccd1d8}
+.tg>div{display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:13px;line-height:1.45;color:#ccd1d8}
 .tg em{font:700 9.5px/1.75 var(--mono);font-style:normal;letter-spacing:.08em;color:var(--gold)}.tg .mn em{color:var(--steelT)}
 .tg .au{color:var(--mut);font-style:italic}.tg .au em{color:var(--mut)}
 .warn{margin-top:11px;border:1px solid var(--red);background:var(--redD);border-radius:3px;padding:9px 11px}
@@ -103,7 +103,7 @@ button:active{transform:translateY(1px)}
 .ck.on .bx::after{content:"";width:9px;height:5px;margin-top:-2px;border-left:2px solid #15120a;border-bottom:2px solid #15120a;transform:rotate(-45deg)}
 .met{margin:12px 0 16px}.met .mh{display:flex;justify-content:space-between;align-items:baseline;font:700 10px/1 var(--mono);letter-spacing:.1em;color:var(--mut)}
 .met .mh b{font-size:13px;color:var(--tx);letter-spacing:0}.mtr{position:relative;height:6px;background:var(--raise);margin-top:8px}
-.mtr&gt;span{position:absolute;left:0;top:0;bottom:0;background:var(--steel)}.mtr&gt;span.full{background:var(--gold)}
+.mtr>span{position:absolute;left:0;top:0;bottom:0;background:var(--steel)}.mtr>span.full{background:var(--gold)}
 .mtr i{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--mut)}
 .mtr i::after{content:attr(data-l);position:absolute;top:13px;left:0;transform:translateX(-50%);font:700 8.5px/1 var(--mono);color:var(--dim);white-space:nowrap}
 .bk{margin-top:11px;padding:10px 11px;border:1px solid var(--line);border-radius:3px;background:var(--bg)}.bk .bt{font:700 14px/1.3 var(--sans);margin-top:5px}.bk .btn{margin-top:10px;width:100%}
@@ -156,7 +156,7 @@ button:active{transform:translateY(1px)}
 .stack .g{background:var(--gold)}.stack .s{background:var(--steel)}.stack .r{background:var(--red);opacity:.65}
 .h3r{display:flex;gap:10px;flex-wrap:wrap;margin-top:7px;font:600 10.5px/1 var(--mono);color:var(--dim)}
 .rr{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.rr&gt;div{background:var(--bg);padding:10px}.rr b{display:block;font:700 19px/1 var(--mono);margin-top:6px}
+.rr>div{background:var(--bg);padding:10px}.rr b{display:block;font:700 19px/1 var(--mono);margin-top:6px}
 .sr+.sr{margin-top:12px}.srh{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:#c3c8d0}.srh b{font:700 11px/1.4 var(--mono);color:var(--gold)}
 .bar{height:4px;background:var(--raise);margin-top:6px;overflow:hidden}.bar span{display:block;height:100%;background:var(--gold)}
 .li{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}.li:first-child{padding-top:0}.li:last-child{border-bottom:0}
@@ -173,8 +173,8 @@ button:active{transform:translateY(1px)}
 .brdur{display:flex;gap:8px;justify-content:center;margin-top:16px}
 .cb{padding:9px 13px;border:1px solid var(--line2);border-radius:3px;font:700 10.5px/1 var(--mono);color:var(--mut)}.cb.on{border-color:var(--gold);color:var(--gold);background:var(--goldD)}
 .brph{text-align:center;font:800 28px/1 var(--sans);letter-spacing:.24em}.brn{text-align:center;font:700 112px/1 var(--mono);color:var(--gold);margin:22px 0 26px}
-.brcy{display:flex;gap:4px}.brcy&gt;div{position:relative;height:12px;background:var(--raise);overflow:hidden}.brcy span{position:absolute;left:0;top:0;bottom:0;width:0}
-.brcy&gt;div:nth-child(1) span{background:var(--gold)}.brcy&gt;div:nth-child(2) span{background:var(--steel)}.brcy&gt;div:nth-child(3) span{background:#c9cdd4}
+.brcy{display:flex;gap:4px}.brcy>div{position:relative;height:12px;background:var(--raise);overflow:hidden}.brcy span{position:absolute;left:0;top:0;bottom:0;width:0}
+.brcy>div:nth-child(1) span{background:var(--gold)}.brcy>div:nth-child(2) span{background:var(--steel)}.brcy>div:nth-child(3) span{background:#c9cdd4}
 .brlb{display:flex;gap:4px;margin-top:7px;font:700 9.5px/1 var(--mono);color:var(--dim)}
 .brm{display:flex;justify-content:space-between;margin-top:26px;font:700 12px/1 var(--mono);color:var(--mut)}
 .brtip{font:italic 14.5px/1.55 var(--serif);color:var(--dim);text-align:center;margin-top:22px}
@@ -198,46 +198,46 @@ button:active{transform:translateY(1px)}
 .btn.rd{background:#070000;border-color:#3d1212;color:#a33a3a}
 .fs.sl .lnk{display:block;width:100%;text-align:center;color:#4d1818;margin-top:14px}
 @media(min-width:640px){.ov{align-items:center}.sheet{border-radius:6px}}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;header class="top"&gt;
-  &lt;div class="top-in"&gt;&lt;div class="brand"&gt;&lt;i&gt;&lt;/i&gt;KARARGÂH&lt;/div&gt;&lt;div class="tag" id="campLbl"&gt;FAZ 1&lt;/div&gt;&lt;/div&gt;
-  &lt;div class="tbar" id="tbar" hidden&gt;&lt;span class="pl"&gt;&lt;/span&gt;&lt;div class="tt"&gt;ODAK SAYACI&lt;br&gt;&lt;span style="color:var(--mut)"&gt;DGS MATEMATİK&lt;/span&gt;&lt;/div&gt;&lt;span class="tv" data-tick&gt;00:00:00&lt;/span&gt;&lt;button class="btn sm gold" data-act="timerStop"&gt;BİTİR&lt;/button&gt;&lt;/div&gt;
-  &lt;div class="tbar slb" id="slbar" hidden&gt;&lt;span class="pl"&gt;&lt;/span&gt;&lt;div class="tt" id="slbT"&gt;KARARTMA&lt;/div&gt;&lt;span class="tv" id="slbV"&gt;&lt;/span&gt;&lt;button class="btn sm red" id="slbB" data-act="slStart"&gt;BAŞLAT&lt;/button&gt;&lt;/div&gt;
-&lt;/header&gt;
-&lt;main&gt;
-  &lt;section class="tab on" id="tab-op"&gt;&lt;div id="opMan"&gt;&lt;/div&gt;&lt;div id="opDay"&gt;&lt;/div&gt;&lt;div id="opFront"&gt;&lt;/div&gt;&lt;div id="opHabits"&gt;&lt;/div&gt;&lt;div id="opData"&gt;&lt;/div&gt;&lt;/section&gt;
-  &lt;section class="tab" id="tab-rapor"&gt;&lt;/section&gt;
-  &lt;section class="tab" id="tab-ayar"&gt;&lt;/section&gt;
-&lt;/main&gt;
-&lt;nav class="tabbar"&gt;&lt;div class="tabbar-in"&gt;
-  &lt;button class="tb on" data-act="tab" data-t="op"&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;circle cx="12" cy="12" r="7.5"/&gt;&lt;path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/&gt;&lt;/svg&gt;OPERASYON&lt;/button&gt;
-  &lt;button class="tb" data-act="tab" data-t="rapor"&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M3 21h18M6 18v-7M10 18V5M14 18V8M18 18v-4"/&gt;&lt;/svg&gt;RAPOR&lt;/button&gt;
-  &lt;button class="tb" data-act="tab" data-t="ayar"&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M3 6h10M17 6h4M3 12h3M10 12h11M3 18h12M19 18h2"/&gt;&lt;circle cx="15" cy="6" r="2"/&gt;&lt;circle cx="8" cy="12" r="2"/&gt;&lt;circle cx="17" cy="18" r="2"/&gt;&lt;/svg&gt;AYARLAR&lt;span class="dot" id="dotAyar" hidden&gt;&lt;/span&gt;&lt;/button&gt;
-&lt;/div&gt;&lt;/nav&gt;
-&lt;div class="ov" id="sheet"&gt;&lt;div class="sheet"&gt;&lt;div class="shh"&gt;&lt;span class="lbl g" id="shT"&gt;&lt;/span&gt;&lt;button class="ib" data-act="shClose"&gt;✕&lt;/button&gt;&lt;/div&gt;&lt;div id="shB"&gt;&lt;/div&gt;&lt;div class="shf" id="shF"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class="fs" id="fsRead"&gt;&lt;div class="fsh"&gt;&lt;span class="lbl g"&gt;A5 KARARGÂH MANİFESTOSU&lt;/span&gt;&lt;button class="ib" data-act="rdClose"&gt;✕&lt;/button&gt;&lt;/div&gt;&lt;div class="man big" id="rdBody"&gt;&lt;/div&gt;&lt;button class="btn gold" id="rdBtn" data-act="manRead"&gt;BUGÜN SESLİ OKUNDU VE HİZALANDI&lt;/button&gt;&lt;/div&gt;
-&lt;div class="fs" id="fsBreath"&gt;
-  &lt;div class="fsh"&gt;&lt;span class="lbl g"&gt;4-4-6 DİYAFRAM NEFESİ&lt;/span&gt;&lt;button class="ib" data-act="brEnd"&gt;✕&lt;/button&gt;&lt;/div&gt;
-  &lt;div class="brdur"&gt;&lt;button class="cb" data-act="brDur" data-s="180"&gt;3 DK · MİNİMUM&lt;/button&gt;&lt;button class="cb" data-act="brDur" data-s="600"&gt;10 DK · TAM&lt;/button&gt;&lt;/div&gt;
-  &lt;div class="brc"&gt;
-    &lt;div class="brph" id="brPh"&gt;HAZIR&lt;/div&gt;&lt;div class="brn" id="brN"&gt;4&lt;/div&gt;
-    &lt;div class="brcy"&gt;&lt;div style="flex:4"&gt;&lt;span id="brS0"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="flex:4"&gt;&lt;span id="brS1"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="flex:6"&gt;&lt;span id="brS2"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;div class="brlb"&gt;&lt;span style="flex:4"&gt;AL 4&lt;/span&gt;&lt;span style="flex:4"&gt;TUT 4&lt;/span&gt;&lt;span style="flex:6"&gt;VER 6&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="brm"&gt;&lt;span id="brT"&gt;00:00 / 10:00&lt;/span&gt;&lt;span id="brC"&gt;0 DÖNGÜ&lt;/span&gt;&lt;/div&gt;&lt;div class="thin"&gt;&lt;span id="brP" style="width:0"&gt;&lt;/span&gt;&lt;/div&gt;
-    &lt;p class="brtip"&gt;Burundan al, karın dolsun. Tut. Yavaşça ver; omuzlar sabit, diyafram çalışır.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="row"&gt;&lt;button class="btn gold" id="brGo" data-act="brGo"&gt;BAŞLAT&lt;/button&gt;&lt;button class="btn" data-act="brEnd"&gt;BİTİR&lt;/button&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="fs sl" id="fsSleep"&gt;
-  &lt;div class="fsh"&gt;&lt;span class="lbl"&gt;☾ KARARTMA&lt;/span&gt;&lt;button class="ib" data-act="slClose" aria-label="Kapat"&gt;✕&lt;/button&gt;&lt;/div&gt;
-  &lt;div class="slw"&gt;&lt;div class="sll" id="slL0"&gt;IŞIKLAR KAPALI · EKRAN KAPALI&lt;/div&gt;&lt;div class="slclk" id="slClk"&gt;--:--&lt;/div&gt;&lt;div class="sll" id="slL1"&gt;&lt;/div&gt;&lt;div class="sll" id="slL2"&gt;&lt;/div&gt;&lt;p class="sltip" id="slTip"&gt;&lt;/p&gt;&lt;/div&gt;
-  &lt;button class="btn rd" data-act="slWake"&gt;UYANDIM · SABAH RAPORU&lt;/button&gt;
-  &lt;button class="lnk" data-act="slCancel"&gt;YANLIŞLIKLA BAŞLATTIM · İPTAL ET&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="toast" id="toast"&gt;&lt;/div&gt;
-&lt;script&gt;
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in"><div class="brand"><i></i>KARARGÂH</div><div class="tag" id="campLbl">FAZ 1</div></div>
+  <div class="tbar" id="tbar" hidden><span class="pl"></span><div class="tt">ODAK SAYACI<br><span style="color:var(--mut)">DGS MATEMATİK</span></div><span class="tv" data-tick>00:00:00</span><button class="btn sm gold" data-act="timerStop">BİTİR</button></div>
+  <div class="tbar slb" id="slbar" hidden><span class="pl"></span><div class="tt" id="slbT">KARARTMA</div><span class="tv" id="slbV"></span><button class="btn sm red" id="slbB" data-act="slStart">BAŞLAT</button></div>
+</header>
+<main>
+  <section class="tab on" id="tab-op"><div id="opMan"></div><div id="opDay"></div><div id="opFront"></div><div id="opHabits"></div><div id="opData"></div></section>
+  <section class="tab" id="tab-rapor"></section>
+  <section class="tab" id="tab-ayar"></section>
+</main>
+<nav class="tabbar"><div class="tabbar-in">
+  <button class="tb on" data-act="tab" data-t="op"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>OPERASYON</button>
+  <button class="tb" data-act="tab" data-t="rapor"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 18v-7M10 18V5M14 18V8M18 18v-4"/></svg>RAPOR</button>
+  <button class="tb" data-act="tab" data-t="ayar"><svg viewBox="0 0 24 24"><path d="M3 6h10M17 6h4M3 12h3M10 12h11M3 18h12M19 18h2"/><circle cx="15" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg>AYARLAR<span class="dot" id="dotAyar" hidden></span></button>
+</div></nav>
+<div class="ov" id="sheet"><div class="sheet"><div class="shh"><span class="lbl g" id="shT"></span><button class="ib" data-act="shClose">✕</button></div><div id="shB"></div><div class="shf" id="shF"></div></div></div>
+<div class="fs" id="fsRead"><div class="fsh"><span class="lbl g">A5 KARARGÂH MANİFESTOSU</span><button class="ib" data-act="rdClose">✕</button></div><div class="man big" id="rdBody"></div><button class="btn gold" id="rdBtn" data-act="manRead">BUGÜN SESLİ OKUNDU VE HİZALANDI</button></div>
+<div class="fs" id="fsBreath">
+  <div class="fsh"><span class="lbl g">4-4-6 DİYAFRAM NEFESİ</span><button class="ib" data-act="brEnd">✕</button></div>
+  <div class="brdur"><button class="cb" data-act="brDur" data-s="180">3 DK · MİNİMUM</button><button class="cb" data-act="brDur" data-s="600">10 DK · TAM</button></div>
+  <div class="brc">
+    <div class="brph" id="brPh">HAZIR</div><div class="brn" id="brN">4</div>
+    <div class="brcy"><div style="flex:4"><span id="brS0"></span></div><div style="flex:4"><span id="brS1"></span></div><div style="flex:6"><span id="brS2"></span></div></div>
+    <div class="brlb"><span style="flex:4">AL 4</span><span style="flex:4">TUT 4</span><span style="flex:6">VER 6</span></div>
+    <div class="brm"><span id="brT">00:00 / 10:00</span><span id="brC">0 DÖNGÜ</span></div><div class="thin"><span id="brP" style="width:0"></span></div>
+    <p class="brtip">Burundan al, karın dolsun. Tut. Yavaşça ver; omuzlar sabit, diyafram çalışır.</p>
+  </div>
+  <div class="row"><button class="btn gold" id="brGo" data-act="brGo">BAŞLAT</button><button class="btn" data-act="brEnd">BİTİR</button></div>
+</div>
+<div class="fs sl" id="fsSleep">
+  <div class="fsh"><span class="lbl">☾ KARARTMA</span><button class="ib" data-act="slClose" aria-label="Kapat">✕</button></div>
+  <div class="slw"><div class="sll" id="slL0">IŞIKLAR KAPALI · EKRAN KAPALI</div><div class="slclk" id="slClk">--:--</div><div class="sll" id="slL1"></div><div class="sll" id="slL2"></div><p class="sltip" id="slTip"></p></div>
+  <button class="btn rd" data-act="slWake">UYANDIM · SABAH RAPORU</button>
+  <button class="lnk" data-act="slCancel">YANLIŞLIKLA BAŞLATTIM · İPTAL ET</button>
+</div>
+<div class="toast" id="toast"></div>
+<script>
 (function(){'use strict';
 const LS='karargah_faz1_v1';
 const MONTHS=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
@@ -262,49 +262,49 @@ Biliyorum ki şans ve fırsat, yalnızca hazır olan zihinlere görünür. Bugü
 İnsanım; şartlar değişebilir ve bazı günler düzenim bozulabilir. Ama beni diğerlerinden ayıran şey, düzenimin hiç bozulmaması değil; bozulduğu an bahane üretmeden zihnimi toparlayıp masama geri dönme hızımdır.
 
 Zihnimi değiştirdikçe düşüncelerim, düşüncelerim değiştikçe hayatım değişiyor. Büyük bir adam olmak benim kaderimde var; ben bu ağır disiplini kaderimi değiştirmek için değil, zaten benim olan kaderi inşa etmek için yaşıyorum.`;
-const H6_OLD='Gün Boyu &amp; Gece Kapanışı',H6_NEW='Gün Boyu &amp; 22:30 – 23:00 Gece Kapanışı';
+const H6_OLD='Gün Boyu & Gece Kapanışı',H6_NEW='Gün Boyu & 22:30 – 23:00 Gece Kapanışı';
 const DEFAULT_HABITS=[
-{id:'h1',identity:'Soğukkanlı Zihin',time:'08:00 – 08:30',action:'Diyafram Nefesi &amp; A5 Manifesto Okuması',full:'10 dk (4-4-6 ritmi) nefes regülasyonu + A5 Manifestoyu sesli ve tok tonla okuma.',min:'3 dk derin nefes + Manifestoyu 1 kez okuma.',audit:'Diyafram gevşedi ve zihin hizalandı mı?',subs:[],tool:'breath'},
+{id:'h1',identity:'Soğukkanlı Zihin',time:'08:00 – 08:30',action:'Diyafram Nefesi & A5 Manifesto Okuması',full:'10 dk (4-4-6 ritmi) nefes regülasyonu + A5 Manifestoyu sesli ve tok tonla okuma.',min:'3 dk derin nefes + Manifestoyu 1 kez okuma.',audit:'Diyafram gevşedi ve zihin hizalandı mı?',subs:[],tool:'breath'},
 {id:'h2',identity:'Etkileyici Hatip',time:'08:30 – 08:42 | Ayna Karşısı',action:'Hitabet ve Otoriter Konuşma Antrenmanı (2 Aşamalı)',full:'5-7 dk İngilizce-Türkçe Çeviri Hitabeti + 5 dk "Yakala-Kaldır-Konuş" Teleprompter Okuması.',min:'2,5 dk Çeviri Hitabeti + 2,5 dk Teleprompter Okuması (Toplam 5 dk).',audit:'',tool:'',subs:[
 'Aşama 1 (Çeviri): Sıfır kelime değiştirme uygulandı (kolay eş anlamlıya kaçılmadı).',
-'Aşama 1 (Nefes &amp; Es): Konuşmadan önce üst nefes tahliye edildi, her 3-4 kelimede 1-2 sn otoriter sessizlik (es) verildi.',
+'Aşama 1 (Nefes & Es): Konuşmadan önce üst nefes tahliye edildi, her 3-4 kelimede 1-2 sn otoriter sessizlik (es) verildi.',
 'Aşama 1 (Stop-Reset): Takılma anında kelime zorlanmadı; anında durulup nefes verilerek cümle baştan kuruldu.',
 'Aşama 2 (Yakala-Kaldır-Konuş): Metinden 3-4 kelime fotoğraflandı, baş kaldırılıp nefes verildi ve metne bakmadan aynaya konuşuldu.']},
 {id:'h3',identity:'Yükselen Devlet Adamı',time:'09:00 – 12:00',action:'DGS Matematik Kampı (Alışkanlık İnşası)',full:'Soru adedi baskısı olmadan 2 - 3 Saat Odaklı Masa Başı Çalışma (KPSS Önlisans kaynaklarıyla konuyu anlama ve işlem pratiği).',min:'45 Dakika Kesintisiz Matematik Çalışması.',audit:'Soru sayısına değil, masa başı pürdikkat süresine sadık kalındı mı?',subs:[],tool:'timer',metric:'math',mMin:45,mFull:120},
-{id:'h4',identity:'Çelik Disiplinli Atlet',time:'Sabah &amp; 16:00 – 17:00',action:'Sabah Postür/Karın &amp; İkindi Ağırlık İdmanı',full:'Sabah 15 dk Mobilite/Postür/Karın + İkindi 45 dk Ağırlık/Barfiks/Şınav idmanı.',min:'10 dk Postür Esneme + Karın idmanı.',audit:'Omurga dikliği ve fiziksel disiplin korundu mu?',subs:[],tool:''},
+{id:'h4',identity:'Çelik Disiplinli Atlet',time:'Sabah & 16:00 – 17:00',action:'Sabah Postür/Karın & İkindi Ağırlık İdmanı',full:'Sabah 15 dk Mobilite/Postür/Karın + İkindi 45 dk Ağırlık/Barfiks/Şınav idmanı.',min:'10 dk Postür Esneme + Karın idmanı.',audit:'Omurga dikliği ve fiziksel disiplin korundu mu?',subs:[],tool:''},
 {id:'h5',identity:'Büyüklerin Öğrencisi',time:'20:30 – 22:00',action:'Pürdikkat Kitap Okuma',full:'Günde 60 - 80 Sayfa Okuma (Eldeki kitapların sırayla eritilip Napolyon biyografisine geçilmesi).',min:'15 Sayfa Okuma.',audit:'Eldeki kitaplar sırayla eritiliyor mu?',subs:[],tool:'book',metric:'pages',mMin:15,mFull:60},
-{id:'h6',identity:'Karargâh Komutanı',time:H6_NEW,action:'Süreç Odağı (Sonuç Hayalini Kesme) &amp; Gece Hazırlığı',full:'Gün içinde çalışırken puan/makam/para hayallerini bıçak gibi kesip sadece o anki cepheye odaklanma + Gece yarının matematik testini masaya açık bırakma.',min:'Günlük takip çizelgesini işaretleme ve masayı toplama.',audit:'Ucuz dopamin (sonuç hayali) kesilip sadece sürece odaklanıldı mı?',subs:[],tool:'cut'},
-{id:'h7',identity:'Dinç Uyanan Komutan',time:'23:00 – 07:00',action:'Karartma: 23:00 Sonrası Yapay Işıksız Zaman &amp; Uyku',full:"23:00'te tüm lambalar ve ekranlar kapanır; kalan zaman karanlıkta nefes ve sessizlikle geçer, ekrana dönülmeden uyunur (hedef 7–8 saat).",min:"En geç 23:30'da karartma; gece ekrana ya da ışığa en fazla 1 kısa dönüş.",audit:"23:00'ten sonra ekran ve yapay ışık tamamen kesildi mi?",subs:[],tool:'sleep',tolT:10,tolM:30}];
+{id:'h6',identity:'Karargâh Komutanı',time:H6_NEW,action:'Süreç Odağı (Sonuç Hayalini Kesme) & Gece Hazırlığı',full:'Gün içinde çalışırken puan/makam/para hayallerini bıçak gibi kesip sadece o anki cepheye odaklanma + Gece yarının matematik testini masaya açık bırakma.',min:'Günlük takip çizelgesini işaretleme ve masayı toplama.',audit:'Ucuz dopamin (sonuç hayali) kesilip sadece sürece odaklanıldı mı?',subs:[],tool:'cut'},
+{id:'h7',identity:'Dinç Uyanan Komutan',time:'23:00 – 07:00',action:'Karartma: 23:00 Sonrası Yapay Işıksız Zaman & Uyku',full:"23:00'te tüm lambalar ve ekranlar kapanır; kalan zaman karanlıkta nefes ve sessizlikle geçer, ekrana dönülmeden uyunur (hedef 7–8 saat).",min:"En geç 23:30'da karartma; gece ekrana ya da ışığa en fazla 1 kısa dönüş.",audit:"23:00'ten sonra ekran ve yapay ışık tamamen kesildi mi?",subs:[],tool:'sleep',tolT:10,tolM:30}];
 
 /* ---------- yardımcılar ---------- */
-const $=s=&gt;document.querySelector(s),$$=s=&gt;document.querySelectorAll(s);
-const clone=o=&gt;JSON.parse(JSON.stringify(o)),pad=n=&gt;String(n).padStart(2,'0');
-const esc=s=&gt;String(s==null?'':s).replace(/[&amp;&lt;&gt;"']/g,c=&gt;({'&amp;':'&amp;amp;','&lt;':'&amp;lt;','&gt;':'&amp;gt;','"':'&amp;quot;',"'":'&amp;#39;'}[c]));
-const up=s=&gt;String(s||'').toLocaleUpperCase('tr-TR');
-const keyOf=d=&gt;d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
-const parseKey=k=&gt;{const p=k.split('-').map(Number);return new Date(p[0],p[1]-1,p[2]);};
-const addDays=(k,n)=&gt;{const d=parseKey(k);d.setDate(d.getDate()+n);return keyOf(d);};
-const diffDays=(a,b)=&gt;Math.round((parseKey(b)-parseKey(a))/864e5);
-const keyNow=rh=&gt;keyOf(new Date(Date.now()-(rh||0)*36e5));
-const monday=k=&gt;addDays(k,-((parseKey(k).getDay()+6)%7));
-const fmt0=n=&gt;Math.round(n).toLocaleString('tr-TR');
-const fmt1=n=&gt;n.toLocaleString('tr-TR',{minimumFractionDigits:1,maximumFractionDigits:1});
-const hm=m=&gt;{m=((Math.floor(m)%1440)+1440)%1440;return pad(Math.floor(m/60))+':'+pad(m%60);};
-const dur=m=&gt;{m=Math.max(0,Math.round(m));const h=Math.floor(m/60),r=m%60;return h?(r?h+' sa '+r+' dk':h+' sa'):r+' dk';};
-const hms=ms=&gt;{const s=Math.max(0,Math.floor(ms/1000));return pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60);};
-const mmss=ms=&gt;{const s=Math.floor(ms/1000);return pad(Math.floor(s/60))+':'+pad(s%60);};
-const timeOf=ts=&gt;{const d=new Date(ts);return pad(d.getHours())+':'+pad(d.getMinutes());};
-const ago=ts=&gt;{const d=Math.floor((Date.now()-ts)/864e5);return d&lt;=0?'bugün':d===1?'dün':d+' gün önce';};
-const dateLong=k=&gt;{const d=parseKey(k);return d.getDate()+' '+MONTHS[d.getMonth()]+' '+d.getFullYear();};
-const dateShort=k=&gt;{const d=parseKey(k);return d.getDate()+' '+MONTHS[d.getMonth()].slice(0,3);};
-const buzz=p=&gt;{try{navigator.vibrate&amp;&amp;navigator.vibrate(p);}catch(e){}};
-const done=v=&gt;v===1||v===2;
-let tt;const toast=m=&gt;{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=&gt;t.classList.remove('on'),2400);};
-const nightMin=ts=&gt;{const d=new Date(ts),m=d.getHours()*60+d.getMinutes();return d.getHours()&lt;12?m+1440:m;};
-const nowN=()=&gt;nightMin(Date.now());
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const clone=o=>JSON.parse(JSON.stringify(o)),pad=n=>String(n).padStart(2,'0');
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const up=s=>String(s||'').toLocaleUpperCase('tr-TR');
+const keyOf=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const parseKey=k=>{const p=k.split('-').map(Number);return new Date(p[0],p[1]-1,p[2]);};
+const addDays=(k,n)=>{const d=parseKey(k);d.setDate(d.getDate()+n);return keyOf(d);};
+const diffDays=(a,b)=>Math.round((parseKey(b)-parseKey(a))/864e5);
+const keyNow=rh=>keyOf(new Date(Date.now()-(rh||0)*36e5));
+const monday=k=>addDays(k,-((parseKey(k).getDay()+6)%7));
+const fmt0=n=>Math.round(n).toLocaleString('tr-TR');
+const fmt1=n=>n.toLocaleString('tr-TR',{minimumFractionDigits:1,maximumFractionDigits:1});
+const hm=m=>{m=((Math.floor(m)%1440)+1440)%1440;return pad(Math.floor(m/60))+':'+pad(m%60);};
+const dur=m=>{m=Math.max(0,Math.round(m));const h=Math.floor(m/60),r=m%60;return h?(r?h+' sa '+r+' dk':h+' sa'):r+' dk';};
+const hms=ms=>{const s=Math.max(0,Math.floor(ms/1000));return pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60);};
+const mmss=ms=>{const s=Math.floor(ms/1000);return pad(Math.floor(s/60))+':'+pad(s%60);};
+const timeOf=ts=>{const d=new Date(ts);return pad(d.getHours())+':'+pad(d.getMinutes());};
+const ago=ts=>{const d=Math.floor((Date.now()-ts)/864e5);return d<=0?'bugün':d===1?'dün':d+' gün önce';};
+const dateLong=k=>{const d=parseKey(k);return d.getDate()+' '+MONTHS[d.getMonth()]+' '+d.getFullYear();};
+const dateShort=k=>{const d=parseKey(k);return d.getDate()+' '+MONTHS[d.getMonth()].slice(0,3);};
+const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p);}catch(e){}};
+const done=v=>v===1||v===2;
+let tt;const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2400);};
+const nightMin=ts=>{const d=new Date(ts),m=d.getHours()*60+d.getMinutes();return d.getHours()<12?m+1440:m;};
+const nowN=()=>nightMin(Date.now());
 const clkRe=/^(\d{1,2}):(\d{2})/;
-function offTsOf(k,c){const m=clkRe.exec(c||'');if(!m||+m[1]&gt;23||+m[2]&gt;59)return 0;const d=parseKey(k),h=+m[1];if(h&lt;12)d.setDate(d.getDate()+1);d.setHours(h,+m[2],0,0);return d.getTime();}
-function afterTs(ts,c){const m=clkRe.exec(c||'');if(!m||+m[1]&gt;23||+m[2]&gt;59)return 0;const d=new Date(ts);d.setHours(+m[1],+m[2],0,0);if(d.getTime()&lt;=ts)d.setDate(d.getDate()+1);return d.getTime();}
+function offTsOf(k,c){const m=clkRe.exec(c||'');if(!m||+m[1]>23||+m[2]>59)return 0;const d=parseKey(k),h=+m[1];if(h<12)d.setDate(d.getDate()+1);d.setHours(h,+m[2],0,0);return d.getTime();}
+function afterTs(ts,c){const m=clkRe.exec(c||'');if(!m||+m[1]>23||+m[2]>59)return 0;const d=new Date(ts);d.setHours(+m[1],+m[2],0,0);if(d.getTime()<=ts)d.setDate(d.getDate()+1);return d.getTime();}
 
 /* ---------- veri ---------- */
 function fresh(){return{v:2,settings:{start:keyNow(4),length:60,rollover:4,oneFront:false},manifesto:DEFAULT_MANIFESTO,habits:clone(DEFAULT_HABITS),
@@ -316,467 +316,466 @@ s.settings.length=Math.min(365,Math.max(7,parseInt(s.settings.length)||60));
 s.settings.rollover=Math.min(6,Math.max(0,parseInt(s.settings.rollover)||0));
 if(typeof s.manifesto!=='string'||!s.manifesto.trim())s.manifesto=DEFAULT_MANIFESTO;
 if(!Array.isArray(s.habits)||!s.habits.length)s.habits=clone(DEFAULT_HABITS);
-s.habits=s.habits.map(h=&gt;Object.assign({audit:'',tool:''},h,{subs:Array.isArray(h.subs)?h.subs:[]}));
-if((+o.v||1)&lt;2)s.habits.forEach(h=&gt;{if(h.id==='h6'&amp;&amp;h.time===H6_OLD)h.time=H6_NEW;});
-if(!s.habits.some(h=&gt;h.tool==='sleep'))s.habits.push(clone(DEFAULT_HABITS.find(h=&gt;h.tool==='sleep')));
+s.habits=s.habits.map(h=>Object.assign({audit:'',tool:''},h,{subs:Array.isArray(h.subs)?h.subs:[]}));
+if((+o.v||1)<2)s.habits.forEach(h=>{if(h.id==='h6'&&h.time===H6_OLD)h.time=H6_NEW;});
+if(!s.habits.some(h=>h.tool==='sleep'))s.habits.push(clone(DEFAULT_HABITS.find(h=>h.tool==='sleep')));
 s.v=2;
-if(!s.sleep||typeof s.sleep!=='object'||!(+s.sleep.off&gt;0)||!/^\d{4}-\d{2}-\d{2}$/.test(s.sleep.day||''))s.sleep=null;
+if(!s.sleep||typeof s.sleep!=='object'||!(+s.sleep.off>0)||!/^\d{4}-\d{2}-\d{2}$/.test(s.sleep.day||''))s.sleep=null;
 if(!Array.isArray(s.books))s.books=[];if(!s.days||typeof s.days!=='object')s.days={};return s;}
 function load(){try{const r=localStorage.getItem(LS);if(r)return normalize(JSON.parse(r));}catch(e){}return fresh();}
 let S=load();
-const save=()=&gt;{try{localStorage.setItem(LS,JSON.stringify(S));}catch(e){toast('Kayıt başarısız — depolama erişimi yok');}};
-const todayKey=()=&gt;keyNow(S.settings.rollover);
+const save=()=>{try{localStorage.setItem(LS,JSON.stringify(S));}catch(e){toast('Kayıt başarısız — depolama erişimi yok');}};
+const todayKey=()=>keyNow(S.settings.rollover);
 const U={tab:'op',sel:null,today:null,manOpen:null,exp:{},rw:null,frontSig:'',slf:null};
-const D=k=&gt;S.days[k]||{};
-const DW=k=&gt;(S.days[k]=S.days[k]||{});
-const st=(k,id)=&gt;{const d=S.days[k];return d&amp;&amp;d.h?d.h[id]:undefined;};
-const minKey=()=&gt;{const T=todayKey();return S.settings.start&lt;T?S.settings.start:T;};
-function counts(k){const h=(S.days[k]&amp;&amp;S.days[k].h)||{};let t=0,m=0,x=0,p=0;
-S.habits.forEach(b=&gt;{const v=h[b.id];if(v===2)t++;else if(v===1)m++;else if(v===0)x++;else p++;});return{t,m,x,p,n:S.habits.length};}
-const dayScore=k=&gt;{const c=counts(k);return c.n?Math.round((c.t*100+c.m*50)/c.n):0;};
-function campKeys(){const T=todayKey(),out=[];if(S.settings.start&gt;T)return out;
-for(let i=0;i&lt;S.settings.length;i++){const k=addDays(S.settings.start,i);if(k&gt;T)break;out.push(k);}return out;}
-function streakAt(id,k){let n=0,c=k;if(st(c,id)===undefined&amp;&amp;c===todayKey())c=addDays(c,-1);
-while(c&gt;=S.settings.start&amp;&amp;done(st(c,id))){n++;c=addDays(c,-1);}return n;}
-function bestStreak(id){const T=todayKey();let b=0,r=0;campKeys().forEach(k=&gt;{const s=st(k,id);
-if(done(s)){r++;if(r&gt;b)b=r;}else if(!(s===undefined&amp;&amp;k===T))r=0;});return b;}
-function missInfo(id,k){const s0=S.settings.start,p=addDays(k,-1);if(p&lt;s0||done(st(p,id)))return null;
-const c=st(k,id);if(done(c))return{type:'back'};if(c===0||k&lt;todayKey())return{type:'broken'};
-const p2=addDays(k,-2);return{type:'warn',multi:p2&gt;=s0&amp;&amp;!done(st(p2,id))};}
-function stats(){const T=todayKey(),keys=campKeys(),n=S.habits.length;const ev=keys.filter(k=&gt;k&lt;T||counts(k).p&lt;n);
+const D=k=>S.days[k]||{};
+const DW=k=>(S.days[k]=S.days[k]||{});
+const st=(k,id)=>{const d=S.days[k];return d&&d.h?d.h[id]:undefined;};
+const minKey=()=>{const T=todayKey();return S.settings.start<T?S.settings.start:T;};
+function counts(k){const h=(S.days[k]&&S.days[k].h)||{};let t=0,m=0,x=0,p=0;
+S.habits.forEach(b=>{const v=h[b.id];if(v===2)t++;else if(v===1)m++;else if(v===0)x++;else p++;});return{t,m,x,p,n:S.habits.length};}
+const dayScore=k=>{const c=counts(k);return c.n?Math.round((c.t*100+c.m*50)/c.n):0;};
+function campKeys(){const T=todayKey(),out=[];if(S.settings.start>T)return out;
+for(let i=0;i<S.settings.length;i++){const k=addDays(S.settings.start,i);if(k>T)break;out.push(k);}return out;}
+function streakAt(id,k){let n=0,c=k;if(st(c,id)===undefined&&c===todayKey())c=addDays(c,-1);
+while(c>=S.settings.start&&done(st(c,id))){n++;c=addDays(c,-1);}return n;}
+function bestStreak(id){const T=todayKey();let b=0,r=0;campKeys().forEach(k=>{const s=st(k,id);
+if(done(s)){r++;if(r>b)b=r;}else if(!(s===undefined&&k===T))r=0;});return b;}
+function missInfo(id,k){const s0=S.settings.start,p=addDays(k,-1);if(p<s0||done(st(p,id)))return null;
+const c=st(k,id);if(done(c))return{type:'back'};if(c===0||k<todayKey())return{type:'broken'};
+const p2=addDays(k,-2);return{type:'warn',multi:p2>=s0&&!done(st(p2,id))};}
+function stats(){const T=todayKey(),keys=campKeys(),n=S.habits.length;const ev=keys.filter(k=>k<T||counts(k).p<n);
 let math=0,pages=0,sum=0,perfect=0,man=0,breath=0;
-keys.forEach(k=&gt;{const d=D(k);math+=+d.math||0;pages+=+d.pages||0;if(d.man)man++;breath+=+d.breath||0;});
-ev.forEach(k=&gt;{const s=dayScore(k);sum+=s;if(s===100)perfect++;});
+keys.forEach(k=>{const d=D(k);math+=+d.math||0;pages+=+d.pages||0;if(d.man)man++;breath+=+d.breath||0;});
+ev.forEach(k=>{const s=dayScore(k);sum+=s;if(s===100)perfect++;});
 return{keys,ev,math,pages,avg:ev.length?Math.round(sum/ev.length):0,perfect,man,breath};}
-function manStreak(){let n=0,k=todayKey();if(!D(k).man)k=addDays(k,-1);while(k&gt;=S.settings.start&amp;&amp;D(k).man){n++;k=addDays(k,-1);}return n;}
-const activeBook=()=&gt;S.books.find(b=&gt;!b.done)||null;
+function manStreak(){let n=0,k=todayKey();if(!D(k).man)k=addDays(k,-1);while(k>=S.settings.start&&D(k).man){n++;k=addDays(k,-1);}return n;}
+const activeBook=()=>S.books.find(b=>!b.done)||null;
 function bookRead(b){let s=+b.start||0;for(const k in S.days){const d=S.days[k];if(d.book===b.id)s+=+d.pages||0;}return s;}
 function bookLine(b){const r=bookRead(b),t=+b.total||0;return t?fmt0(r)+' / '+fmt0(t)+' sayfa · %'+Math.min(100,Math.round(r/t*100)):fmt0(r)+' sayfa okundu';}
-const bookReady=b=&gt;b&amp;&amp;!b.done&amp;&amp;+b.total&gt;0&amp;&amp;bookRead(b)&gt;=+b.total;
+const bookReady=b=>b&&!b.done&&+b.total>0&&bookRead(b)>=+b.total;
 function ranges(h){const o=[],re=/(\d{1,2})[:.](\d{2})\s*[–—-]\s*(\d{1,2})[:.](\d{2})/g;let m;
-while((m=re.exec(h.time||''))){const a=+m[1]*60+ +m[2],b=+m[3]*60+ +m[4];if(b&gt;a)o.push([a,b]);else if(b&lt;a){o.push([a,b+1440]);o.push([a-1440,b]);}}return o;}
+while((m=re.exec(h.time||''))){const a=+m[1]*60+ +m[2],b=+m[3]*60+ +m[4];if(b>a)o.push([a,b]);else if(b<a){o.push([a,b+1440]);o.push([a-1440,b]);}}return o;}
 function front(){const n=new Date(),t=n.getHours()*60+n.getMinutes()+n.getSeconds()/60;
-const night=()=&gt;{const h=S.habits.find(x=&gt;!ranges(x).length);return h?{mode:'night',h,t}:null;};
+const night=()=>{const h=S.habits.find(x=>!ranges(x).length);return h?{mode:'night',h,t}:null;};
 let cur=null,nx=null;
-S.habits.forEach(h=&gt;ranges(h).forEach(r=&gt;{if(t&gt;=r[0]&amp;&amp;t&lt;r[1]&amp;&amp;!cur)cur={h,a:r[0],b:r[1]};if(r[0]&gt;t&amp;&amp;(!nx||r[0]&lt;nx.a))nx={h,a:r[0],b:r[1]};}));
-if(cur)return Object.assign({mode:'now',t},cur);if(t&lt;S.settings.rollover*60)return night();
+S.habits.forEach(h=>ranges(h).forEach(r=>{if(t>=r[0]&&t<r[1]&&!cur)cur={h,a:r[0],b:r[1]};if(r[0]>t&&(!nx||r[0]<nx.a))nx={h,a:r[0],b:r[1]};}));
+if(cur)return Object.assign({mode:'now',t},cur);if(t<S.settings.rollover*60)return night();
 if(nx)return Object.assign({mode:'next',t},nx);return night();}
 /* karartma yardımcıları */
-const sleepH=()=&gt;S.habits.find(h=&gt;h.tool==='sleep')||null;
-const slTarget=h=&gt;{const m=/(\d{1,2})[:.](\d{2})/.exec((h&amp;&amp;h.time)||'');const a=m?+m[1]*60+ +m[2]:1380;return a&lt;720?a+1440:a;};
-const tolT=h=&gt;h&amp;&amp;h.tolT!=null?Math.max(0,+h.tolT||0):10;
-const tolM=h=&gt;Math.max(tolT(h),h&amp;&amp;h.tolM!=null?+h.tolM||0:30);
-const slSug=(h,off,br)=&gt;{if(!off)return undefined;const l=nightMin(off)-slTarget(h);return l&lt;=tolT(h)&amp;&amp;!br?2:l&lt;=tolM(h)&amp;&amp;br&lt;=1?1:0;};
-const slWin=pre=&gt;{const h=sleepH();if(!h)return false;const n=nowN(),t0=slTarget(h);return n&gt;=t0-pre&amp;&amp;n&lt;S.settings.rollover*60+1440;};
-const slLine=sl=&gt;timeOf(sl.off)+' → '+(sl.wake?timeOf(sl.wake)+' · '+dur((sl.wake-sl.off)/6e4):'uyanış girilmedi');
-const lateTxt=(h,off)=&gt;{const l=nightMin(off)-slTarget(h);return l&lt;=0?'zamanında':'+'+dur(l)+' geç';};
+const sleepH=()=>S.habits.find(h=>h.tool==='sleep')||null;
+const slTarget=h=>{const m=/(\d{1,2})[:.](\d{2})/.exec((h&&h.time)||'');const a=m?+m[1]*60+ +m[2]:1380;return a<720?a+1440:a;};
+const tolT=h=>h&&h.tolT!=null?Math.max(0,+h.tolT||0):10;
+const tolM=h=>Math.max(tolT(h),h&&h.tolM!=null?+h.tolM||0:30);
+const slSug=(h,off,br)=>{if(!off)return undefined;const l=nightMin(off)-slTarget(h);return l<=tolT(h)&&!br?2:l<=tolM(h)&&br<=1?1:0;};
+const slWin=pre=>{const h=sleepH();if(!h)return false;const n=nowN(),t0=slTarget(h);return n>=t0-pre&&n<S.settings.rollover*60+1440;};
+const slLine=sl=>timeOf(sl.off)+' → '+(sl.wake?timeOf(sl.wake)+' · '+dur((sl.wake-sl.off)/6e4):'uyanış girilmedi');
+const lateTxt=(h,off)=>{const l=nightMin(off)-slTarget(h);return l<=0?'zamanında':'+'+dur(l)+' geç';};
 const VL=['YAPILMADI','MİNİMUM','TAM HEDEF'];
-const statChip=s=&gt;s===2?'&lt;span class="chip g"&gt;TAM&lt;/span&gt;':s===1?'&lt;span class="chip s"&gt;MİN&lt;/span&gt;':s===0?'&lt;span class="chip r"&gt;YOK&lt;/span&gt;':'&lt;span class="chip"&gt;BEKLİYOR&lt;/span&gt;';
-const fmtSub=t=&gt;{const i=t.indexOf(':');return i&gt;0&amp;&amp;i&lt;48?'&lt;b&gt;'+esc(t.slice(0,i+1))+'&lt;/b&gt;'+esc(t.slice(i+1)):esc(t);};
-const isHead=l=&gt;l.length&lt;70&amp;&amp;l===l.toLocaleUpperCase('tr-TR')&amp;&amp;/[A-ZÇĞİÖŞÜ]/.test(l);
-function manHTML(txt){return txt.trim().split(/\n\s*\n/).map(b=&gt;{const L=b.split('\n').map(x=&gt;x.trim()).filter(Boolean);let o='';
-if(L.length&amp;&amp;isHead(L[0]))o+='&lt;h4&gt;'+esc(L.shift())+'&lt;/h4&gt;';if(L.length)o+='&lt;p&gt;'+L.map(esc).join('&lt;br&gt;')+'&lt;/p&gt;';return o;}).join('');}
+const statChip=s=>s===2?'<span class="chip g">TAM</span>':s===1?'<span class="chip s">MİN</span>':s===0?'<span class="chip r">YOK</span>':'<span class="chip">BEKLİYOR</span>';
+const fmtSub=t=>{const i=t.indexOf(':');return i>0&&i<48?'<b>'+esc(t.slice(0,i+1))+'</b>'+esc(t.slice(i+1)):esc(t);};
+const isHead=l=>l.length<70&&l===l.toLocaleUpperCase('tr-TR')&&/[A-ZÇĞİÖŞÜ]/.test(l);
+function manHTML(txt){return txt.trim().split(/\n\s*\n/).map(b=>{const L=b.split('\n').map(x=>x.trim()).filter(Boolean);let o='';
+if(L.length&&isHead(L[0]))o+='<h4>'+esc(L.shift())+'</h4>';if(L.length)o+='<p>'+L.map(esc).join('<br>')+'</p>';return o;}).join('');}
 
 /* ---------- OPERASYON ---------- */
 function renderMan(){const k=U.sel,T=todayKey(),r=D(k).man;let open=U.manOpen;
-if(open===null)open=!r&amp;&amp;k===T&amp;&amp;new Date().getHours()&lt;12;
-const chip=r?'&lt;span class="chip g"&gt;OKUNDU'+(r&gt;1?' · '+timeOf(r):'')+'&lt;/span&gt;':'&lt;span class="chip'+(k&lt;T?' r':'')+'"&gt;'+(k&lt;T?'OKUNMADI':'BEKLİYOR')+'&lt;/span&gt;';
-$('#opMan').innerHTML=`&lt;div class="card mcard${open?' open':''}"&gt;&lt;button class="acc" data-act="manToggle"&gt;&lt;div class="at"&gt;&lt;div class="lbl g"&gt;SABİT DOKTRİN&lt;/div&gt;&lt;b&gt;A5 KARARGÂH MANİFESTOSU&lt;/b&gt;&lt;/div&gt;${chip}&lt;svg class="chev" viewBox="0 0 24 24"&gt;&lt;path d="M6 9l6 6 6-6"/&gt;&lt;/svg&gt;&lt;/button&gt;
-${open?`&lt;div class="man"&gt;${manHTML(S.manifesto)}&lt;/div&gt;&lt;div class="mfoot"&gt;&lt;span&gt;SERİ ${manStreak()} GÜN&lt;/span&gt;&lt;span&gt;FAZ 1: ${stats().man} / ${campKeys().length} GÜN&lt;/span&gt;&lt;/div&gt;
-&lt;button class="btn ${r?'gl':'gold'}" data-act="manRead"&gt;${r?'✓ SESLİ OKUNDU VE HİZALANDI':'BUGÜN SESLİ OKUNDU VE HİZALANDI'}&lt;/button&gt;&lt;button class="btn" data-act="reader"&gt;TAM EKRAN OKUMA MODU&lt;/button&gt;`:''}&lt;/div&gt;`;}
+if(open===null)open=!r&&k===T&&new Date().getHours()<12;
+const chip=r?'<span class="chip g">OKUNDU'+(r>1?' · '+timeOf(r):'')+'</span>':'<span class="chip'+(k<T?' r':'')+'">'+(k<T?'OKUNMADI':'BEKLİYOR')+'</span>';
+$('#opMan').innerHTML=`<div class="card mcard${open?' open':''}"><button class="acc" data-act="manToggle"><div class="at"><div class="lbl g">SABİT DOKTRİN</div><b>A5 KARARGÂH MANİFESTOSU</b></div>${chip}<svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+${open?`<div class="man">${manHTML(S.manifesto)}</div><div class="mfoot"><span>SERİ ${manStreak()} GÜN</span><span>FAZ 1: ${stats().man} / ${campKeys().length} GÜN</span></div>
+<button class="btn ${r?'gl':'gold'}" data-act="manRead">${r?'✓ SESLİ OKUNDU VE HİZALANDI':'BUGÜN SESLİ OKUNDU VE HİZALANDI'}</button><button class="btn" data-act="reader">TAM EKRAN OKUMA MODU</button>`:''}</div>`;}
 function weekStrip(k){const mon=monday(k),T=todayKey();let h='';
-for(let i=0;i&lt;7;i++){const dk=addDays(mon,i),off=dk&gt;T||dk&lt;S.settings.start,c=counts(dk),sc=dayScore(dk);
-h+=`&lt;button class="wd${dk===k?' sel':''}${dk===T?' td':''}" data-act="day" data-k="${dk}"${off?' disabled':''}&gt;&lt;span class="n"&gt;${DS[i]}&lt;/span&gt;&lt;span class="dd"&gt;${parseKey(dk).getDate()}&lt;/span&gt;&lt;span class="m"&gt;&lt;span style="width:${off?0:sc}%"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;${off?'—':(dk&lt;T||c.p&lt;c.n?sc+'%':'·')}&lt;/span&gt;&lt;/button&gt;`;}return h;}
+for(let i=0;i<7;i++){const dk=addDays(mon,i),off=dk>T||dk<S.settings.start,c=counts(dk),sc=dayScore(dk);
+h+=`<button class="wd${dk===k?' sel':''}${dk===T?' td':''}" data-act="day" data-k="${dk}"${off?' disabled':''}><span class="n">${DS[i]}</span><span class="dd">${parseKey(dk).getDate()}</span><span class="m"><span style="width:${off?0:sc}%"></span></span><span class="p">${off?'—':(dk<T||c.p<c.n?sc+'%':'·')}</span></button>`;}return h;}
 function renderOpDay(){const k=U.sel,T=todayKey(),isT=k===T,dt=parseKey(k),c=counts(k),z=stats();
 const n=diffDays(S.settings.start,k)+1,len=S.settings.length;
-const wn=S.habits.filter(h=&gt;{const m=missInfo(h.id,k);return m&amp;&amp;m.type!=='back';}).length;
-$('#opDay').innerHTML=`&lt;div class="card"&gt;&lt;div class="dnav"&gt;
-&lt;button class="ib" data-act="prev" aria-label="Önceki gün"${k&lt;=minKey()?' disabled':''}&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M15 6l-6 6 6 6"/&gt;&lt;/svg&gt;&lt;/button&gt;
-&lt;label class="dsel"&gt;&lt;span class="t1"&gt;${up(dateLong(k))}&lt;/span&gt;&lt;span class="t2"&gt;${up(DAYS[(dt.getDay()+6)%7])} · ${isT?'BUGÜN':'GEÇMİŞ'}${n&gt;=1&amp;&amp;n&lt;=len?' · GÜN '+n+'/'+len:''}&lt;/span&gt;&lt;input type="date" class="dp" value="${k}" min="${minKey()}" max="${T}"&gt;&lt;/label&gt;
-&lt;button class="ib" data-act="next" aria-label="Sonraki gün"${k&gt;=T?' disabled':''}&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M9 6l6 6-6 6"/&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
-${isT?'':'&lt;button class="past" data-act="today"&gt;GEÇMİŞ GÜN DÜZENLENİYOR · BUGÜNE DÖN ›&lt;/button&gt;'}
-&lt;div class="score"&gt;&lt;div class="big"&gt;${dayScore(k)}&lt;small&gt;%&lt;/small&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;GÜNLÜK DİSİPLİN SKORU&lt;/div&gt;
-&lt;div class="cnts"&gt;&lt;i class="g"&gt;TAM ${c.t}&lt;/i&gt;&lt;i class="s"&gt;MİN ${c.m}&lt;/i&gt;&lt;i class="r"&gt;YOK ${c.x}&lt;/i&gt;&lt;i&gt;${isT?'BEKLEYEN':'İŞARETSİZ'} ${c.p}&lt;/i&gt;&lt;/div&gt;
-${wn?`&lt;div class="cnts" style="margin-top:6px"&gt;&lt;i class="r"&gt;⚠ ${wn} CEPHEDE AKSATMA UYARISI&lt;/i&gt;&lt;/div&gt;`:''}&lt;/div&gt;&lt;/div&gt;
-&lt;div class="pbar"&gt;&lt;span class="g" style="width:${c.t*100/c.n}%"&gt;&lt;/span&gt;&lt;span class="s" style="width:${c.m*50/c.n}%"&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div class="week"&gt;${weekStrip(k)}&lt;/div&gt;
-&lt;div class="cum"&gt;&lt;div&gt;&lt;div class="lbl"&gt;Σ MATEMATİK&lt;/div&gt;&lt;b&gt;${fmt1(z.math/60)} sa&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;Σ SAYFA&lt;/div&gt;&lt;b&gt;${fmt0(z.pages)}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;ORT. SKOR&lt;/div&gt;&lt;b&gt;%${z.avg}&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`;}
+const wn=S.habits.filter(h=>{const m=missInfo(h.id,k);return m&&m.type!=='back';}).length;
+$('#opDay').innerHTML=`<div class="card"><div class="dnav">
+<button class="ib" data-act="prev" aria-label="Önceki gün"${k<=minKey()?' disabled':''}><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+<label class="dsel"><span class="t1">${up(dateLong(k))}</span><span class="t2">${up(DAYS[(dt.getDay()+6)%7])} · ${isT?'BUGÜN':'GEÇMİŞ'}${n>=1&&n<=len?' · GÜN '+n+'/'+len:''}</span><input type="date" class="dp" value="${k}" min="${minKey()}" max="${T}"></label>
+<button class="ib" data-act="next" aria-label="Sonraki gün"${k>=T?' disabled':''}><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+${isT?'':'<button class="past" data-act="today">GEÇMİŞ GÜN DÜZENLENİYOR · BUGÜNE DÖN ›</button>'}
+<div class="score"><div class="big">${dayScore(k)}<small>%</small></div><div><div class="lbl">GÜNLÜK DİSİPLİN SKORU</div>
+<div class="cnts"><i class="g">TAM ${c.t}</i><i class="s">MİN ${c.m}</i><i class="r">YOK ${c.x}</i><i>${isT?'BEKLEYEN':'İŞARETSİZ'} ${c.p}</i></div>
+${wn?`<div class="cnts" style="margin-top:6px"><i class="r">⚠ ${wn} CEPHEDE AKSATMA UYARISI</i></div>`:''}</div></div>
+<div class="pbar"><span class="g" style="width:${c.t*100/c.n}%"></span><span class="s" style="width:${c.m*50/c.n}%"></span></div>
+<div class="week">${weekStrip(k)}</div>
+<div class="cum"><div><div class="lbl">Σ MATEMATİK</div><b>${fmt1(z.math/60)} sa</b></div><div><div class="lbl">Σ SAYFA</div><b>${fmt0(z.pages)}</b></div><div><div class="lbl">ORT. SKOR</div><b>%${z.avg}</b></div></div></div>`;}
 function renderFront(){const el=$('#opFront'),T=todayKey();if(U.sel!==T){el.innerHTML='';return;}
 const f=front();if(!f){el.innerHTML='';return;}const h=f.h;let lbl,meta,bar='';
-if(f.mode==='now'){lbl='ŞU AN AKTİF CEPHE';meta=`&lt;span&gt;${hm(f.a)} – ${hm(f.b)}&lt;/span&gt;&lt;span&gt;${up(dur(Math.ceil(f.b-f.t)))} KALDI&lt;/span&gt;`;
-bar=`&lt;div class="thin"&gt;&lt;span style="width:${Math.min(100,(f.t-f.a)/(f.b-f.a)*100).toFixed(1)}%"&gt;&lt;/span&gt;&lt;/div&gt;`;}
-else if(f.mode==='next'){lbl='SIRADAKİ CEPHE';meta=`&lt;span&gt;${hm(f.a)} – ${hm(f.b)}&lt;/span&gt;&lt;span&gt;${up(dur(Math.ceil(f.a-f.t)))} SONRA&lt;/span&gt;`;}
-else{lbl='GECE KAPANIŞI';meta=`&lt;span&gt;${esc(h.time)}&lt;/span&gt;&lt;span&gt;&lt;/span&gt;`;}
-const isS=h.tool==='sleep',q=isS?'Işıklar sönük, ekranlar kapalı. Karanlık da bir emirdir: beden onarılır, zihin yarının cephesine hazırlanır.':(f.mode==='night'||(f.mode==='now'&amp;&amp;h.tool==='cut'))?'Masayı topla, yarının matematik testini açık bırak. Karargâh kapanmadan gün kapanmaz.':'Masada yalnızca bu cephenin haritası açık. Diğer birlikler kışlada emir bekler.';
-const xb=!isS?'':S.sleep?'&lt;button class="tl r" data-act="slOpen"&gt;☾ KARARTMA EKRANI&lt;/button&gt;':(!(D(T).sl&amp;&amp;D(T).sl.off)&amp;&amp;slWin(120))?'&lt;button class="tl r" data-act="slStart"&gt;☾ KARARTMAYI BAŞLAT&lt;/button&gt;':'';
-el.innerHTML=`&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;KOMUTA&lt;/span&gt;&lt;/div&gt;&lt;div class="card front" data-act="goCard" data-h="${h.id}"&gt;
-&lt;div class="fh"&gt;&lt;span class="lbl g"&gt;${lbl}&lt;/span&gt;${statChip(st(T,h.id))}&lt;/div&gt;&lt;div class="fn"&gt;${esc(up(h.identity))}&lt;/div&gt;&lt;div class="fa"&gt;${esc(h.action)}&lt;/div&gt;
-&lt;div class="fm"&gt;${meta}&lt;/div&gt;${bar}&lt;div class="fq"&gt;${q}&lt;/div&gt;
-&lt;div class="tools"&gt;${xb}&lt;button class="tl${S.settings.oneFront?' g':''}" data-act="oneFront"&gt;TEK CEPHE MODU · ${S.settings.oneFront?'AÇIK':'KAPALI'}&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`;}
+if(f.mode==='now'){lbl='ŞU AN AKTİF CEPHE';meta=`<span>${hm(f.a)} – ${hm(f.b)}</span><span>${up(dur(Math.ceil(f.b-f.t)))} KALDI</span>`;
+bar=`<div class="thin"><span style="width:${Math.min(100,(f.t-f.a)/(f.b-f.a)*100).toFixed(1)}%"></span></div>`;}
+else if(f.mode==='next'){lbl='SIRADAKİ CEPHE';meta=`<span>${hm(f.a)} – ${hm(f.b)}</span><span>${up(dur(Math.ceil(f.a-f.t)))} SONRA</span>`;}
+else{lbl='GECE KAPANIŞI';meta=`<span>${esc(h.time)}</span><span></span>`;}
+const isS=h.tool==='sleep',q=isS?'Işıklar sönük, ekranlar kapalı. Karanlık da bir emirdir: beden onarılır, zihin yarının cephesine hazırlanır.':(f.mode==='night'||(f.mode==='now'&&h.tool==='cut'))?'Masayı topla, yarının matematik testini açık bırak. Karargâh kapanmadan gün kapanmaz.':'Masada yalnızca bu cephenin haritası açık. Diğer birlikler kışlada emir bekler.';
+const xb=!isS?'':S.sleep?'<button class="tl r" data-act="slOpen">☾ KARARTMA EKRANI</button>':(!(D(T).sl&&D(T).sl.off)&&slWin(120))?'<button class="tl r" data-act="slStart">☾ KARARTMAYI BAŞLAT</button>':'';
+el.innerHTML=`<div class="sec"><span class="lbl g">KOMUTA</span></div><div class="card front" data-act="goCard" data-h="${h.id}">
+<div class="fh"><span class="lbl g">${lbl}</span>${statChip(st(T,h.id))}</div><div class="fn">${esc(up(h.identity))}</div><div class="fa">${esc(h.action)}</div>
+<div class="fm">${meta}</div>${bar}<div class="fq">${q}</div>
+<div class="tools">${xb}<button class="tl${S.settings.oneFront?' g':''}" data-act="oneFront">TEK CEPHE MODU · ${S.settings.oneFront?'AÇIK':'KAPALI'}</button></div></div>`;}
 function compact(h,d,s,k){if(h.tool==='breath')return'Nefes '+Math.round((+d.breath||0)/60)+' dk · Manifesto '+(d.man?'✓':'—');
-if(h.tool==='sleep')return d.sl&amp;&amp;d.sl.off?'Karartma '+slLine(d.sl):S.sleep&amp;&amp;S.sleep.day===k?'Karartma aktif':'Gece kaydı yok';
+if(h.tool==='sleep')return d.sl&&d.sl.off?'Karartma '+slLine(d.sl):S.sleep&&S.sleep.day===k?'Karartma aktif':'Gece kaydı yok';
 if(h.metric==='math')return'Odaklı süre: '+dur(+d.math||0);if(h.metric==='pages')return'Okunan: '+fmt0(+d.pages||0)+' sayfa';
-if(h.subs&amp;&amp;h.subs.length){const a=(d.sub&amp;&amp;d.sub[h.id])||[];return'Teknik denetim: '+h.subs.filter((_,j)=&gt;a[j]).length+'/'+h.subs.length;}
+if(h.subs&&h.subs.length){const a=(d.sub&&d.sub[h.id])||[];return'Teknik denetim: '+h.subs.filter((_,j)=>a[j]).length+'/'+h.subs.length;}
 if(h.tool==='cut')return'Kesilen hayal: '+(+d.cut||0);return s===2?'Tam hedef tamamlandı.':s===1?'Minimum korundu.':'Yapılmadı.';}
-function subsHTML(h,d){if(!h.subs||!h.subs.length)return'';const a=(d.sub&amp;&amp;d.sub[h.id])||[],n=h.subs.filter((_,j)=&gt;a[j]).length;
-return`&lt;div class="subs"&gt;&lt;div class="sh"&gt;&lt;span class="lbl"&gt;TEKNİK DENETİM LİSTESİ&lt;/span&gt;&lt;span class="lbl${n===h.subs.length?' g':''}"&gt;${n}/${h.subs.length}&lt;/span&gt;&lt;/div&gt;${h.subs.map((t,j)=&gt;`&lt;button class="ck${a[j]?' on':''}" data-act="sub" data-h="${h.id}" data-j="${j}"&gt;&lt;span class="bx"&gt;&lt;/span&gt;&lt;span&gt;${fmtSub(t)}&lt;/span&gt;&lt;/button&gt;`).join('')}&lt;/div&gt;`;}
-function metricHTML(h,d){if(!h.metric)return'';const v=+d[h.metric]||0,mn=+h.mMin||0,fu=+h.mFull||0,mx=Math.max(fu*1.25,mn*1.25,v,1),P=x=&gt;(x/mx*100).toFixed(2);
-return`&lt;div class="met"&gt;&lt;div class="mh"&gt;&lt;span&gt;${h.metric==='math'?'ODAKLI MASA SÜRESİ':'OKUNAN SAYFA'}&lt;/span&gt;&lt;b&gt;${h.metric==='math'?dur(v):fmt0(v)+' sayfa'}&lt;/b&gt;&lt;/div&gt;
-&lt;div class="mtr"&gt;&lt;span class="${fu&amp;&amp;v&gt;=fu?'full':''}" style="width:${P(v)}%"&gt;&lt;/span&gt;${mn?`&lt;i style="left:${P(mn)}%" data-l="MİN ${mn}"&gt;&lt;/i&gt;`:''}${fu?`&lt;i style="left:${P(fu)}%" data-l="TAM ${fu}"&gt;&lt;/i&gt;`:''}&lt;/div&gt;&lt;/div&gt;`;}
+function subsHTML(h,d){if(!h.subs||!h.subs.length)return'';const a=(d.sub&&d.sub[h.id])||[],n=h.subs.filter((_,j)=>a[j]).length;
+return`<div class="subs"><div class="sh"><span class="lbl">TEKNİK DENETİM LİSTESİ</span><span class="lbl${n===h.subs.length?' g':''}">${n}/${h.subs.length}</span></div>${h.subs.map((t,j)=>`<button class="ck${a[j]?' on':''}" data-act="sub" data-h="${h.id}" data-j="${j}"><span class="bx"></span><span>${fmtSub(t)}</span></button>`).join('')}</div>`;}
+function metricHTML(h,d){if(!h.metric)return'';const v=+d[h.metric]||0,mn=+h.mMin||0,fu=+h.mFull||0,mx=Math.max(fu*1.25,mn*1.25,v,1),P=x=>(x/mx*100).toFixed(2);
+return`<div class="met"><div class="mh"><span>${h.metric==='math'?'ODAKLI MASA SÜRESİ':'OKUNAN SAYFA'}</span><b>${h.metric==='math'?dur(v):fmt0(v)+' sayfa'}</b></div>
+<div class="mtr"><span class="${fu&&v>=fu?'full':''}" style="width:${P(v)}%"></span>${mn?`<i style="left:${P(mn)}%" data-l="MİN ${mn}"></i>`:''}${fu?`<i style="left:${P(fu)}%" data-l="TAM ${fu}"></i>`:''}</div></div>`;}
 function bookHTML(h){if(h.tool!=='book')return'';const b=activeBook();
-if(!b)return'&lt;div class="bk"&gt;&lt;span class="lbl"&gt;ERİTME LİSTESİ&lt;/span&gt;&lt;div class="hint"&gt;Liste boş — Ayarlar › Eritme Listesi&lt;/div&gt;&lt;/div&gt;';
-return`&lt;div class="bk"&gt;&lt;span class="lbl"&gt;ŞU AN ERİTİLEN KİTAP&lt;/span&gt;&lt;div class="bt"&gt;${esc(b.title)}&lt;/div&gt;&lt;div class="hint"&gt;${bookLine(b)}${b.final&amp;&amp;S.books.length===1?'&lt;br&gt;Önce eldeki kitaplarını Ayarlar › Eritme Listesi\'ne ekle.':''}&lt;/div&gt;${bookReady(b)?`&lt;button class="btn sm gl" data-act="bookDone" data-id="${b.id}"&gt;KİTAP ERİDİ → SIRADAKİNE GEÇ&lt;/button&gt;`:''}&lt;/div&gt;`;}
+if(!b)return'<div class="bk"><span class="lbl">ERİTME LİSTESİ</span><div class="hint">Liste boş — Ayarlar › Eritme Listesi</div></div>';
+return`<div class="bk"><span class="lbl">ŞU AN ERİTİLEN KİTAP</span><div class="bt">${esc(b.title)}</div><div class="hint">${bookLine(b)}${b.final&&S.books.length===1?'<br>Önce eldeki kitaplarını Ayarlar › Eritme Listesi\'ne ekle.':''}</div>${bookReady(b)?`<button class="btn sm gl" data-act="bookDone" data-id="${b.id}">KİTAP ERİDİ → SIRADAKİNE GEÇ</button>`:''}</div>`;}
 function toolsHTML(h,d,isT,k){
 if(h.tool==='breath'){const bm=Math.round((+d.breath||0)/60),mr=!!d.man;
-return(bm||!isT?`&lt;div class="hint"&gt;NEFES: ${bm} dk · MANİFESTO: ${mr?'OKUNDU ✓':'OKUNMADI'}&lt;/div&gt;`:'')+(isT?`&lt;div class="tools"&gt;&lt;button class="tl g" data-act="breath"&gt;▶ 4-4-6 NEFES RİTMİ&lt;/button&gt;&lt;button class="tl${mr?' g':''}" data-act="reader"&gt;${mr?'✓ MANİFESTO':'MANİFESTOYU OKU'}&lt;/button&gt;&lt;/div&gt;`:'');}
-if(h.tool==='timer'){if(!isT)return'';return`&lt;div class="tools"&gt;${S.timer?`&lt;button class="tl g" data-act="timerStop"&gt;■ BİTİR &amp; KAYDET · &lt;span data-tick&gt;${hms(Date.now()-S.timer.start)}&lt;/span&gt;&lt;/button&gt;&lt;button class="tl n" data-act="timerCancel" aria-label="İptal"&gt;✕&lt;/button&gt;`:'&lt;button class="tl g" data-act="timerStart"&gt;▶ ODAK SAYACINI BAŞLAT&lt;/button&gt;'}&lt;/div&gt;&lt;div class="hint"&gt;Sayaç süresi Odaklı Matematik alanına otomatik eklenir.&lt;/div&gt;`;}
-if(h.tool==='cut'){const c=+d.cut||0;return isT?`&lt;div class="tools"&gt;&lt;button class="tl g" data-act="cut"&gt;✂ SONUÇ HAYALİ YAKALANDI · KES&lt;/button&gt;&lt;div class="cnt"&gt;${c}&lt;/div&gt;&lt;button class="tl n" data-act="cutMinus" aria-label="Azalt"&gt;−&lt;/button&gt;&lt;/div&gt;&lt;div class="hint"&gt;Puan/makam/para hayali her yakalandığında bas, kes ve cepheye dön.&lt;/div&gt;`:(c?`&lt;div class="hint"&gt;YAKALANIP KESİLEN HAYAL: ${c}&lt;/div&gt;`:'');}
-if(h.tool==='sleep'){const sl=d.sl,has=!!(sl&amp;&amp;sl.off);let o='';
-if(has)o+=`&lt;div class="bk"&gt;&lt;span class="lbl"&gt;GECE KAYDI${sl.auto?' · RAPOR BEKLİYOR':''}&lt;/span&gt;&lt;div class="bt"&gt;${slLine(sl)}&lt;/div&gt;&lt;div class="hint"&gt;Hedef ${hm(slTarget(h))} · ${lateTxt(h,sl.off)} · ihlal ${+sl.br||0}${sl.q?' · kalite '+sl.q+'/5':''}&lt;/div&gt;&lt;button class="btn sm gl" data-act="slEdit" data-k="${k}"&gt;${sl.auto?'SABAH RAPORUNU TAMAMLA':'RAPORU DÜZENLE'}&lt;/button&gt;&lt;/div&gt;`;
-if(S.sleep&amp;&amp;(isT||S.sleep.day===k))o+=`&lt;div class="tools"&gt;&lt;button class="tl r" data-act="slOpen"&gt;☾ KARARTMA AKTİF · &lt;span data-sl&gt;${hms(Date.now()-S.sleep.off)}&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;`;
-else if(isT&amp;&amp;!has)o+='&lt;div class="tools"&gt;&lt;button class="tl r" data-act="slStart"&gt;☾ KARARTMAYI BAŞLAT&lt;/button&gt;&lt;/div&gt;&lt;div class="hint"&gt;Karartma saatinde dokun, telefonu yataktan uzağa koy. Sabah UYANDIM de.&lt;/div&gt;';
-else if(!isT&amp;&amp;!has)o+=`&lt;div class="tools"&gt;&lt;button class="tl g" data-act="slEdit" data-k="${k}"&gt;GECE KAYDINI GİR&lt;/button&gt;&lt;/div&gt;`;
-if(isT){const y=addDays(k,-1),ys=D(y).sl;if(y&gt;=S.settings.start&amp;&amp;!(S.sleep&amp;&amp;S.sleep.day===y)){
-o+=ys&amp;&amp;ys.off&amp;&amp;!ys.auto?`&lt;div class="hint"&gt;DÜN GECE: ${slLine(ys)} · ${lateTxt(h,ys.off)}&lt;/div&gt;`:`&lt;div class="tools"&gt;&lt;button class="tl g" data-act="slEdit" data-k="${y}"&gt;${ys&amp;&amp;ys.off?'DÜN GECENİN RAPORUNU TAMAMLA':'DÜN GECENİN KAYDINI GİR'}&lt;/button&gt;&lt;/div&gt;`;}}
+return(bm||!isT?`<div class="hint">NEFES: ${bm} dk · MANİFESTO: ${mr?'OKUNDU ✓':'OKUNMADI'}</div>`:'')+(isT?`<div class="tools"><button class="tl g" data-act="breath">▶ 4-4-6 NEFES RİTMİ</button><button class="tl${mr?' g':''}" data-act="reader">${mr?'✓ MANİFESTO':'MANİFESTOYU OKU'}</button></div>`:'');}
+if(h.tool==='timer'){if(!isT)return'';return`<div class="tools">${S.timer?`<button class="tl g" data-act="timerStop">■ BİTİR & KAYDET · <span data-tick>${hms(Date.now()-S.timer.start)}</span></button><button class="tl n" data-act="timerCancel" aria-label="İptal">✕</button>`:'<button class="tl g" data-act="timerStart">▶ ODAK SAYACINI BAŞLAT</button>'}</div><div class="hint">Sayaç süresi Odaklı Matematik alanına otomatik eklenir.</div>`;}
+if(h.tool==='cut'){const c=+d.cut||0;return isT?`<div class="tools"><button class="tl g" data-act="cut">✂ SONUÇ HAYALİ YAKALANDI · KES</button><div class="cnt">${c}</div><button class="tl n" data-act="cutMinus" aria-label="Azalt">−</button></div><div class="hint">Puan/makam/para hayali her yakalandığında bas, kes ve cepheye dön.</div>`:(c?`<div class="hint">YAKALANIP KESİLEN HAYAL: ${c}</div>`:'');}
+if(h.tool==='sleep'){const sl=d.sl,has=!!(sl&&sl.off);let o='';
+if(has)o+=`<div class="bk"><span class="lbl">GECE KAYDI${sl.auto?' · RAPOR BEKLİYOR':''}</span><div class="bt">${slLine(sl)}</div><div class="hint">Hedef ${hm(slTarget(h))} · ${lateTxt(h,sl.off)} · ihlal ${+sl.br||0}${sl.q?' · kalite '+sl.q+'/5':''}</div><button class="btn sm gl" data-act="slEdit" data-k="${k}">${sl.auto?'SABAH RAPORUNU TAMAMLA':'RAPORU DÜZENLE'}</button></div>`;
+if(S.sleep&&(isT||S.sleep.day===k))o+=`<div class="tools"><button class="tl r" data-act="slOpen">☾ KARARTMA AKTİF · <span data-sl>${hms(Date.now()-S.sleep.off)}</span></button></div>`;
+else if(isT&&!has)o+='<div class="tools"><button class="tl r" data-act="slStart">☾ KARARTMAYI BAŞLAT</button></div><div class="hint">Karartma saatinde dokun, telefonu yataktan uzağa koy. Sabah UYANDIM de.</div>';
+else if(!isT&&!has)o+=`<div class="tools"><button class="tl g" data-act="slEdit" data-k="${k}">GECE KAYDINI GİR</button></div>`;
+if(isT){const y=addDays(k,-1),ys=D(y).sl;if(y>=S.settings.start&&!(S.sleep&&S.sleep.day===y)){
+o+=ys&&ys.off&&!ys.auto?`<div class="hint">DÜN GECE: ${slLine(ys)} · ${lateTxt(h,ys.off)}</div>`:`<div class="tools"><button class="tl g" data-act="slEdit" data-k="${y}">${ys&&ys.off?'DÜN GECENİN RAPORUNU TAMAMLA':'DÜN GECENİN KAYDINI GİR'}</button></div>`;}}
 return o;}
 return'';}
 function fullCard(h,i,k,isT,isNow){const d=D(k),s=st(k,h.id),sk=streakAt(h.id,k),mi=missInfo(h.id,k),det=s===undefined||U.exp[h.id];let w='';
-if(mi){if(mi.type==='warn')w=`&lt;div class="warn"&gt;&lt;b&gt;İKİ GÜN ÜST ÜSTE AKSATMA! DERHAL MASAYA DÖN&lt;/b&gt;&lt;span&gt;${mi.multi?'Zincir birden fazla gündür kopuk. Bahane yok: bugün en az MİNİMUM ile geri dön.':'Dün aksatıldı. Bugün en az MİNİMUM ALT SINIR tamamlanmalı.'}&lt;/span&gt;&lt;/div&gt;`;
-else if(mi.type==='broken')w='&lt;div class="warn solid"&gt;&lt;b&gt;İKİ GÜN ÜST ÜSTE AKSATILDI&lt;/b&gt;&lt;span&gt;Kural çiğnendi. Ertesi gün bu cephe ilk emirdir.&lt;/span&gt;&lt;/div&gt;';
-else w='&lt;div class="bok"&gt;✓ GERİ DÖNÜŞ — DÜNKÜ AKSATMA BUGÜN TELAFİ EDİLDİ&lt;/div&gt;';}
-let body=det?`&lt;div class="tg"&gt;&lt;div&gt;&lt;em&gt;TAM&lt;/em&gt;&lt;span&gt;${esc(h.full)}&lt;/span&gt;&lt;/div&gt;&lt;div class="mn"&gt;&lt;em&gt;MİNİMUM&lt;/em&gt;&lt;span&gt;${esc(h.min)}&lt;/span&gt;&lt;/div&gt;${h.audit?`&lt;div class="au"&gt;&lt;em&gt;DENETİM&lt;/em&gt;&lt;span&gt;${esc(h.audit)}&lt;/span&gt;&lt;/div&gt;`:''}&lt;/div&gt;`+subsHTML(h,d)+metricHTML(h,d)+bookHTML(h)+toolsHTML(h,d,isT,k)
-:`&lt;div class="cmp"&gt;&lt;span&gt;${compact(h,d,s,k)}&lt;/span&gt;&lt;button class="lnk" data-act="exp" data-h="${h.id}"&gt;DETAY ▾&lt;/button&gt;&lt;/div&gt;`;
-if(det&amp;&amp;s!==undefined)body+=`&lt;div class="cmp" style="justify-content:flex-end"&gt;&lt;button class="lnk" data-act="exp" data-h="${h.id}"&gt;GİZLE ▴&lt;/button&gt;&lt;/div&gt;`;
-return`&lt;article class="card hc st${s===undefined?'n':s}${isNow?' now':''}" id="hc-${h.id}"&gt;&lt;div class="hh"&gt;&lt;div class="hn"&gt;${pad(i+1)}&lt;/div&gt;
-&lt;div class="hid"&gt;&lt;div class="k"&gt;KİMLİK&lt;/div&gt;&lt;div class="nm"&gt;${esc(up(h.identity))}&lt;/div&gt;&lt;div class="tm"&gt;${esc(h.time)}${isNow?' &lt;span class="chip g"&gt;ŞU AN&lt;/span&gt;':''}&lt;/div&gt;&lt;div class="ac"&gt;${esc(h.action)}&lt;/div&gt;&lt;/div&gt;
-&lt;div class="stk${sk?' on':''}"&gt;&lt;b&gt;${sk}&lt;/b&gt;&lt;span&gt;SERİ&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;${w}${body}
-&lt;div class="seg"&gt;&lt;button class="sb t${s===2?' on':''}" data-act="set" data-h="${h.id}" data-v="2"&gt;&lt;b&gt;TAM HEDEF&lt;/b&gt;&lt;small&gt;%100&lt;/small&gt;&lt;/button&gt;
-&lt;button class="sb m${s===1?' on':''}" data-act="set" data-h="${h.id}" data-v="1"&gt;&lt;b&gt;MİNİMUM&lt;/b&gt;&lt;small&gt;%50&lt;/small&gt;&lt;/button&gt;
-&lt;button class="sb x${s===0?' on':''}" data-act="set" data-h="${h.id}" data-v="0"&gt;&lt;b&gt;YAPILMADI&lt;/b&gt;&lt;small&gt;%0&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;&lt;/article&gt;`;}
+if(mi){if(mi.type==='warn')w=`<div class="warn"><b>İKİ GÜN ÜST ÜSTE AKSATMA! DERHAL MASAYA DÖN</b><span>${mi.multi?'Zincir birden fazla gündür kopuk. Bahane yok: bugün en az MİNİMUM ile geri dön.':'Dün aksatıldı. Bugün en az MİNİMUM ALT SINIR tamamlanmalı.'}</span></div>`;
+else if(mi.type==='broken')w='<div class="warn solid"><b>İKİ GÜN ÜST ÜSTE AKSATILDI</b><span>Kural çiğnendi. Ertesi gün bu cephe ilk emirdir.</span></div>';
+else w='<div class="bok">✓ GERİ DÖNÜŞ — DÜNKÜ AKSATMA BUGÜN TELAFİ EDİLDİ</div>';}
+let body=det?`<div class="tg"><div><em>TAM</em><span>${esc(h.full)}</span></div><div class="mn"><em>MİNİMUM</em><span>${esc(h.min)}</span></div>${h.audit?`<div class="au"><em>DENETİM</em><span>${esc(h.audit)}</span></div>`:''}</div>`+subsHTML(h,d)+metricHTML(h,d)+bookHTML(h)+toolsHTML(h,d,isT,k)
+:`<div class="cmp"><span>${compact(h,d,s,k)}</span><button class="lnk" data-act="exp" data-h="${h.id}">DETAY ▾</button></div>`;
+if(det&&s!==undefined)body+=`<div class="cmp" style="justify-content:flex-end"><button class="lnk" data-act="exp" data-h="${h.id}">GİZLE ▴</button></div>`;
+return`<article class="card hc st${s===undefined?'n':s}${isNow?' now':''}" id="hc-${h.id}"><div class="hh"><div class="hn">${pad(i+1)}</div>
+<div class="hid"><div class="k">KİMLİK</div><div class="nm">${esc(up(h.identity))}</div><div class="tm">${esc(h.time)}${isNow?' <span class="chip g">ŞU AN</span>':''}</div><div class="ac">${esc(h.action)}</div></div>
+<div class="stk${sk?' on':''}"><b>${sk}</b><span>SERİ</span></div></div>${w}${body}
+<div class="seg"><button class="sb t${s===2?' on':''}" data-act="set" data-h="${h.id}" data-v="2"><b>TAM HEDEF</b><small>%100</small></button>
+<button class="sb m${s===1?' on':''}" data-act="set" data-h="${h.id}" data-v="1"><b>MİNİMUM</b><small>%50</small></button>
+<button class="sb x${s===0?' on':''}" data-act="set" data-h="${h.id}" data-v="0"><b>YAPILMADI</b><small>%0</small></button></div></article>`;}
 function miniCard(h,i,k){const s=st(k,h.id),mi=missInfo(h.id,k);
-return`&lt;button class="card hc mini st${s===undefined?'n':s}" data-act="exp" data-h="${h.id}"&gt;&lt;span class="hn"&gt;${pad(i+1)}&lt;/span&gt;&lt;span class="nm"&gt;${esc(up(h.identity))}&lt;small&gt;${esc(h.time)}&lt;/small&gt;&lt;/span&gt;${mi&amp;&amp;mi.type!=='back'?'&lt;span class="chip r"&gt;!&lt;/span&gt;':''}${statChip(s)}&lt;/button&gt;`;}
+return`<button class="card hc mini st${s===undefined?'n':s}" data-act="exp" data-h="${h.id}"><span class="hn">${pad(i+1)}</span><span class="nm">${esc(up(h.identity))}<small>${esc(h.time)}</small></span>${mi&&mi.type!=='back'?'<span class="chip r">!</span>':''}${statChip(s)}</button>`;}
 function renderHabits(){const k=U.sel,isT=k===todayKey(),f=isT?front():null,fid=f?f.h.id:null;U.frontSig=f?f.mode+fid:'';
-const one=isT&amp;&amp;S.settings.oneFront&amp;&amp;fid;
-$('#opHabits').innerHTML=`&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;CEPHELER · ${S.habits.length} BİRLİK&lt;/span&gt;&lt;/div&gt;`+S.habits.map((h,i)=&gt;one&amp;&amp;h.id!==fid&amp;&amp;!U.exp[h.id]?miniCard(h,i,k):fullCard(h,i,k,isT,!!f&amp;&amp;f.mode==='now'&amp;&amp;h.id===fid)).join('');}
-const mathHint=d=&gt;'= '+dur(+d.math||0)+' · MİN 45 · TAM 120–180 dk'+(d.ses?' · '+d.ses+' sayaç seansı':'');
-const pagesHint=d=&gt;{const b=d.book?S.books.find(x=&gt;x.id===d.book):activeBook();return b?'→ '+esc(b.title):'Eritme listesi boş — Ayarlar';};
+const one=isT&&S.settings.oneFront&&fid;
+$('#opHabits').innerHTML=`<div class="sec"><span class="lbl g">CEPHELER · ${S.habits.length} BİRLİK</span></div>`+S.habits.map((h,i)=>one&&h.id!==fid&&!U.exp[h.id]?miniCard(h,i,k):fullCard(h,i,k,isT,!!f&&f.mode==='now'&&h.id===fid)).join('');}
+const mathHint=d=>'= '+dur(+d.math||0)+' · MİN 45 · TAM 120–180 dk'+(d.ses?' · '+d.ses+' sayaç seansı':'');
+const pagesHint=d=>{const b=d.book?S.books.find(x=>x.id===d.book):activeBook();return b?'→ '+esc(b.title):'Eritme listesi boş — Ayarlar';};
 function renderData(){const k=U.sel,d=D(k);
-$('#opData').innerHTML=`&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;GÜN SONU VERİ GİRİŞİ&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;
-&lt;div class="fld"&gt;&lt;label class="fl" for="fMath"&gt;Bugün Odaklı Matematik Süresi (Dakika)&lt;/label&gt;&lt;div class="inrow"&gt;&lt;button class="qk" data-act="qk" data-f="math" data-n="-15"&gt;−15&lt;/button&gt;&lt;input id="fMath" class="num" type="number" inputmode="numeric" pattern="[0-9]*" placeholder="0" value="${d.math||''}" data-f="math"&gt;&lt;button class="qk" data-act="qk" data-f="math" data-n="15"&gt;+15&lt;/button&gt;&lt;button class="qk" data-act="qk" data-f="math" data-n="45"&gt;+45&lt;/button&gt;&lt;/div&gt;&lt;div class="hint" id="hMath"&gt;${mathHint(d)}&lt;/div&gt;&lt;/div&gt;
-&lt;div class="fld"&gt;&lt;label class="fl" for="fPages"&gt;Bugün Okunan Kitap Sayfası&lt;/label&gt;&lt;div class="inrow"&gt;&lt;button class="qk" data-act="qk" data-f="pages" data-n="-5"&gt;−5&lt;/button&gt;&lt;input id="fPages" class="num" type="number" inputmode="numeric" pattern="[0-9]*" placeholder="0" value="${d.pages||''}" data-f="pages"&gt;&lt;button class="qk" data-act="qk" data-f="pages" data-n="5"&gt;+5&lt;/button&gt;&lt;button class="qk" data-act="qk" data-f="pages" data-n="15"&gt;+15&lt;/button&gt;&lt;/div&gt;&lt;div class="hint" id="hPages"&gt;${pagesHint(d)}&lt;/div&gt;&lt;/div&gt;
-&lt;div class="fld"&gt;&lt;label class="fl" for="fNote"&gt;Gün Sonu Raporu &lt;small&gt;(isteğe bağlı)&lt;/small&gt;&lt;/label&gt;&lt;textarea id="fNote" class="ta" data-f="note" placeholder="Ne bozdu? Yarın ilk emir hangi cephe?"&gt;${esc(d.note||'')}&lt;/textarea&gt;&lt;/div&gt;&lt;/div&gt;`;}
-function setMetric(f,v,upd){const k=U.sel,d=DW(k);d[f]=v;if(f==='pages'&amp;&amp;v&gt;0&amp;&amp;!d.book){const b=activeBook();if(b)d.book=b.id;}save();
+$('#opData').innerHTML=`<div class="sec"><span class="lbl g">GÜN SONU VERİ GİRİŞİ</span></div><div class="card">
+<div class="fld"><label class="fl" for="fMath">Bugün Odaklı Matematik Süresi (Dakika)</label><div class="inrow"><button class="qk" data-act="qk" data-f="math" data-n="-15">−15</button><input id="fMath" class="num" type="number" inputmode="numeric" pattern="[0-9]*" placeholder="0" value="${d.math||''}" data-f="math"><button class="qk" data-act="qk" data-f="math" data-n="15">+15</button><button class="qk" data-act="qk" data-f="math" data-n="45">+45</button></div><div class="hint" id="hMath">${mathHint(d)}</div></div>
+<div class="fld"><label class="fl" for="fPages">Bugün Okunan Kitap Sayfası</label><div class="inrow"><button class="qk" data-act="qk" data-f="pages" data-n="-5">−5</button><input id="fPages" class="num" type="number" inputmode="numeric" pattern="[0-9]*" placeholder="0" value="${d.pages||''}" data-f="pages"><button class="qk" data-act="qk" data-f="pages" data-n="5">+5</button><button class="qk" data-act="qk" data-f="pages" data-n="15">+15</button></div><div class="hint" id="hPages">${pagesHint(d)}</div></div>
+<div class="fld"><label class="fl" for="fNote">Gün Sonu Raporu <small>(isteğe bağlı)</small></label><textarea id="fNote" class="ta" data-f="note" placeholder="Ne bozdu? Yarın ilk emir hangi cephe?">${esc(d.note||'')}</textarea></div></div>`;}
+function setMetric(f,v,upd){const k=U.sel,d=DW(k);d[f]=v;if(f==='pages'&&v>0&&!d.book){const b=activeBook();if(b)d.book=b.id;}save();
 if(upd){const i=$(f==='math'?'#fMath':'#fPages');if(i)i.value=v||'';}
 $('#hMath').innerHTML=mathHint(d);$('#hPages').innerHTML=pagesHint(d);renderHabits();renderOpDay();}
-const renderOp=()=&gt;{renderMan();renderOpDay();renderFront();renderHabits();renderData();};
+const renderOp=()=>{renderMan();renderOpDay();renderFront();renderHabits();renderData();};
 
 /* ---------- RAPOR ---------- */
 function weekChart(mon){const T=todayKey(),n=S.habits.length;let cols='',mt='',pg='',sum=0,cnt=0,wm=0,wp=0;
-for(let i=0;i&lt;7;i++){const k=addDays(mon,i),off=k&gt;T||k&lt;S.settings.start,c=counts(k),d=D(k),g=c.t*100/n,s=c.m*50/n,ev=!off&amp;&amp;(k&lt;T||c.p&lt;n);
+for(let i=0;i<7;i++){const k=addDays(mon,i),off=k>T||k<S.settings.start,c=counts(k),d=D(k),g=c.t*100/n,s=c.m*50/n,ev=!off&&(k<T||c.p<n);
 if(ev){sum+=g+s;cnt++;}if(!off){wm+=+d.math||0;wp+=+d.pages||0;}
-cols+=`&lt;button data-act="day" data-k="${k}" class="${k===T?'td':''}"${off?' disabled':''}&gt;&lt;span class="v"&gt;${ev?Math.round(g+s):'—'}&lt;/span&gt;&lt;span class="col"&gt;&lt;span class="s" style="height:${off?0:s}%"&gt;&lt;/span&gt;&lt;span class="g" style="height:${off?0:g}%"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="n"&gt;${DS[i]}&lt;/span&gt;&lt;/button&gt;`;
-mt+=`&lt;span&gt;${off?'·':(+d.math||0)}&lt;/span&gt;`;pg+=`&lt;span&gt;${off?'·':(+d.pages||0)}&lt;/span&gt;`;}
-return`&lt;div class="wkh"&gt;&lt;button class="ib" data-act="wPrev"${addDays(mon,-1)&gt;=S.settings.start?'':' disabled'}&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M15 6l-6 6 6 6"/&gt;&lt;/svg&gt;&lt;/button&gt;&lt;div class="wl"&gt;${up(dateShort(mon))} – ${up(dateShort(addDays(mon,6)))}&lt;/div&gt;&lt;button class="ib" data-act="wNext"${addDays(mon,7)&lt;=T?'':' disabled'}&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M9 6l6 6-6 6"/&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
-&lt;div class="wk"&gt;${cols}&lt;/div&gt;&lt;div class="wtab"&gt;&lt;span&gt;MAT&lt;/span&gt;${mt}&lt;span&gt;SAY&lt;/span&gt;${pg}&lt;/div&gt;
-&lt;div class="wsum"&gt;&lt;span&gt;ORT. &lt;b&gt;%${cnt?Math.round(sum/cnt):0}&lt;/b&gt;&lt;/span&gt;&lt;span&gt;MAT &lt;b&gt;${dur(wm)}&lt;/b&gt;&lt;/span&gt;&lt;span&gt;SAYFA &lt;b&gt;${fmt0(wp)}&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;`;}
-function campGrid(){const T=todayKey();let h='';for(let i=0;i&lt;S.settings.length;i++){const k=addDays(S.settings.start,i),c=counts(k);let cl;
-if(k&gt;T)cl='fut';else if(k===T&amp;&amp;c.p===c.n)cl='pend';else{const s=dayScore(k);cl=s===0?'l0':s&lt;40?'l1':s&lt;70?'l2':s&lt;100?'l3':'l4';}
-h+=`&lt;button class="gc ${cl}${k===T?' td':''}" data-act="day" data-k="${k}"${k&gt;T?' disabled':''}&gt;${i+1}&lt;/button&gt;`;}
-return`&lt;div class="grid"&gt;${h}&lt;/div&gt;&lt;div class="hint"&gt;Kareye dokun → o günü aç ve düzenle. Koyu kırmızı %0, tam altın %100.&lt;/div&gt;`;}
-function habitRow(h,i){const T=todayKey();let t=0,m=0,x=0;campKeys().forEach(k=&gt;{const s=st(k,h.id);if(s===2)t++;else if(s===1)m++;else if(s===0||k&lt;T)x++;});const n=t+m+x||1;
-return`&lt;div class="hs"&gt;&lt;div class="h1r"&gt;&lt;b&gt;${pad(i+1)} · ${esc(up(h.identity))}&lt;/b&gt;&lt;span&gt;SERİ ${streakAt(h.id,T)} · EN İYİ ${bestStreak(h.id)}&lt;/span&gt;&lt;/div&gt;
-&lt;div class="stack"&gt;&lt;span class="g" style="width:${t/n*100}%"&gt;&lt;/span&gt;&lt;span class="s" style="width:${m/n*100}%"&gt;&lt;/span&gt;&lt;span class="r" style="width:${x/n*100}%"&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div class="h3r"&gt;&lt;span&gt;TAM ${t}&lt;/span&gt;&lt;span&gt;MİN ${m}&lt;/span&gt;&lt;span&gt;YOK ${x}&lt;/span&gt;&lt;span&gt;UYUM %${Math.round((t+m)/n*100)}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;`;}
+cols+=`<button data-act="day" data-k="${k}" class="${k===T?'td':''}"${off?' disabled':''}><span class="v">${ev?Math.round(g+s):'—'}</span><span class="col"><span class="s" style="height:${off?0:s}%"></span><span class="g" style="height:${off?0:g}%"></span></span><span class="n">${DS[i]}</span></button>`;
+mt+=`<span>${off?'·':(+d.math||0)}</span>`;pg+=`<span>${off?'·':(+d.pages||0)}</span>`;}
+return`<div class="wkh"><button class="ib" data-act="wPrev"${addDays(mon,-1)>=S.settings.start?'':' disabled'}><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><div class="wl">${up(dateShort(mon))} – ${up(dateShort(addDays(mon,6)))}</div><button class="ib" data-act="wNext"${addDays(mon,7)<=T?'':' disabled'}><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+<div class="wk">${cols}</div><div class="wtab"><span>MAT</span>${mt}<span>SAY</span>${pg}</div>
+<div class="wsum"><span>ORT. <b>%${cnt?Math.round(sum/cnt):0}</b></span><span>MAT <b>${dur(wm)}</b></span><span>SAYFA <b>${fmt0(wp)}</b></span></div>`;}
+function campGrid(){const T=todayKey();let h='';for(let i=0;i<S.settings.length;i++){const k=addDays(S.settings.start,i),c=counts(k);let cl;
+if(k>T)cl='fut';else if(k===T&&c.p===c.n)cl='pend';else{const s=dayScore(k);cl=s===0?'l0':s<40?'l1':s<70?'l2':s<100?'l3':'l4';}
+h+=`<button class="gc ${cl}${k===T?' td':''}" data-act="day" data-k="${k}"${k>T?' disabled':''}>${i+1}</button>`;}
+return`<div class="grid">${h}</div><div class="hint">Kareye dokun → o günü aç ve düzenle. Koyu kırmızı %0, tam altın %100.</div>`;}
+function habitRow(h,i){const T=todayKey();let t=0,m=0,x=0;campKeys().forEach(k=>{const s=st(k,h.id);if(s===2)t++;else if(s===1)m++;else if(s===0||k<T)x++;});const n=t+m+x||1;
+return`<div class="hs"><div class="h1r"><b>${pad(i+1)} · ${esc(up(h.identity))}</b><span>SERİ ${streakAt(h.id,T)} · EN İYİ ${bestStreak(h.id)}</span></div>
+<div class="stack"><span class="g" style="width:${t/n*100}%"></span><span class="s" style="width:${m/n*100}%"></span><span class="r" style="width:${x/n*100}%"></span></div>
+<div class="h3r"><span>TAM ${t}</span><span>MİN ${m}</span><span>YOK ${x}</span><span>UYUM %${Math.round((t+m)/n*100)}</span></div></div>`;}
 function recovery(){const T=todayKey(),keys=campKeys();let miss=0,back=0,dbl=0;
-S.habits.forEach(h=&gt;keys.forEach(k=&gt;{const s=st(k,h.id);if(!(s===0||(s===undefined&amp;&amp;k&lt;T)))return;miss++;const nk=addDays(k,1);if(nk&gt;T)return;
-const ns=st(nk,h.id);if(done(ns))back++;else if(ns===0||nk&lt;T)dbl++;}));return{miss,back,dbl,rate:back+dbl?Math.round(back/(back+dbl)*100):null};}
-function subReport(h){let days=0;const c=h.subs.map(()=&gt;0);
-campKeys().forEach(k=&gt;{if(!done(st(k,h.id)))return;days++;const a=(D(k).sub||{})[h.id]||[];h.subs.forEach((_,j)=&gt;{if(a[j])c[j]++;});});
-const r=c.map(x=&gt;days?Math.round(x/days*100):0);let weak=-1;if(days&gt;=3){let mn=101;r.forEach((v,j)=&gt;{if(v&lt;mn){mn=v;weak=j;}});}
-const lab=t=&gt;{const i=t.indexOf(':');return esc(i&gt;0&amp;&amp;i&lt;48?t.slice(0,i):t.slice(0,48));};
-return`&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;${esc(up(h.identity))} · TEKNİK DENETİM&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;${h.subs.map((t,j)=&gt;`&lt;div class="sr"&gt;&lt;div class="srh"&gt;&lt;span&gt;${lab(t)}${j===weak?' &lt;span class="chip r"&gt;ZAYIF HALKA&lt;/span&gt;':''}&lt;/span&gt;&lt;b&gt;%${r[j]}&lt;/b&gt;&lt;/div&gt;&lt;div class="bar"&gt;&lt;span style="width:${r[j]}%"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;`).join('')}&lt;div class="hint"&gt;${days} uygulama günü üzerinden.&lt;/div&gt;&lt;/div&gt;`;}
-function booksReport(){if(!S.books.length)return'&lt;div class="hint" style="margin:0"&gt;Liste boş.&lt;/div&gt;';const ab=activeBook(),T=todayKey();
-let p7=0;for(let i=0;i&lt;7;i++)p7+=+D(addDays(T,-i)).pages||0;const rate=p7/7;
-return S.books.map((b,i)=&gt;{const r=bookRead(b),t=+b.total||0,pc=t?Math.min(100,Math.round(r/t*100)):0;
-const tag=b.done?'&lt;span class="chip g"&gt;ERİTİLDİ&lt;/span&gt;':b===ab?'&lt;span class="chip s"&gt;AKTİF&lt;/span&gt;':'&lt;span class="chip"&gt;SIRADA&lt;/span&gt;';
-const eta=b===ab&amp;&amp;t&amp;&amp;rate&gt;0&amp;&amp;r&lt;t?' · tahmini '+Math.ceil((t-r)/rate)+' gün':'';
-return`&lt;div class="sr"&gt;&lt;div class="srh"&gt;&lt;span&gt;${pad(i+1)} · ${esc(b.title)} ${tag}&lt;/span&gt;&lt;b&gt;${t?'%'+pc:fmt0(r)+' s'}&lt;/b&gt;&lt;/div&gt;&lt;div class="bar"&gt;&lt;span style="width:${b.done?100:pc}%"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="hint" style="margin-top:5px"&gt;${bookLine(b)}${eta}&lt;/div&gt;&lt;/div&gt;`;}).join('');}
+S.habits.forEach(h=>keys.forEach(k=>{const s=st(k,h.id);if(!(s===0||(s===undefined&&k<T)))return;miss++;const nk=addDays(k,1);if(nk>T)return;
+const ns=st(nk,h.id);if(done(ns))back++;else if(ns===0||nk<T)dbl++;}));return{miss,back,dbl,rate:back+dbl?Math.round(back/(back+dbl)*100):null};}
+function subReport(h){let days=0;const c=h.subs.map(()=>0);
+campKeys().forEach(k=>{if(!done(st(k,h.id)))return;days++;const a=(D(k).sub||{})[h.id]||[];h.subs.forEach((_,j)=>{if(a[j])c[j]++;});});
+const r=c.map(x=>days?Math.round(x/days*100):0);let weak=-1;if(days>=3){let mn=101;r.forEach((v,j)=>{if(v<mn){mn=v;weak=j;}});}
+const lab=t=>{const i=t.indexOf(':');return esc(i>0&&i<48?t.slice(0,i):t.slice(0,48));};
+return`<div class="sec"><span class="lbl g">${esc(up(h.identity))} · TEKNİK DENETİM</span></div><div class="card">${h.subs.map((t,j)=>`<div class="sr"><div class="srh"><span>${lab(t)}${j===weak?' <span class="chip r">ZAYIF HALKA</span>':''}</span><b>%${r[j]}</b></div><div class="bar"><span style="width:${r[j]}%"></span></div></div>`).join('')}<div class="hint">${days} uygulama günü üzerinden.</div></div>`;}
+function booksReport(){if(!S.books.length)return'<div class="hint" style="margin:0">Liste boş.</div>';const ab=activeBook(),T=todayKey();
+let p7=0;for(let i=0;i<7;i++)p7+=+D(addDays(T,-i)).pages||0;const rate=p7/7;
+return S.books.map((b,i)=>{const r=bookRead(b),t=+b.total||0,pc=t?Math.min(100,Math.round(r/t*100)):0;
+const tag=b.done?'<span class="chip g">ERİTİLDİ</span>':b===ab?'<span class="chip s">AKTİF</span>':'<span class="chip">SIRADA</span>';
+const eta=b===ab&&t&&rate>0&&r<t?' · tahmini '+Math.ceil((t-r)/rate)+' gün':'';
+return`<div class="sr"><div class="srh"><span>${pad(i+1)} · ${esc(b.title)} ${tag}</span><b>${t?'%'+pc:fmt0(r)+' s'}</b></div><div class="bar"><span style="width:${b.done?100:pc}%"></span></div><div class="hint" style="margin-top:5px">${bookLine(b)}${eta}</div></div>`;}).join('');}
 function sleepReport(){const h=sleepH();if(!h)return'';const T0=slTarget(h),tT=tolT(h);
-const head='&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;KARARTMA RAPORU · UYKU&lt;/span&gt;&lt;/div&gt;';
-const rows=campKeys().slice().reverse().map(k=&gt;({k,s:D(k).sl})).filter(x=&gt;x.s&amp;&amp;x.s.off);
-if(!rows.length)return head+'&lt;div class="card"&gt;&lt;div class="hint" style="margin:0"&gt;Henüz gece kaydı yok. Karartma saatinde KARARTMAYI BAŞLAT\'a dokun ya da sabah dün gecenin kaydını gir.&lt;/div&gt;&lt;/div&gt;';
+const head='<div class="sec"><span class="lbl g">KARARTMA RAPORU · UYKU</span></div>';
+const rows=campKeys().slice().reverse().map(k=>({k,s:D(k).sl})).filter(x=>x.s&&x.s.off);
+if(!rows.length)return head+'<div class="card"><div class="hint" style="margin:0">Henüz gece kaydı yok. Karartma saatinde KARARTMAYI BAŞLAT\'a dokun ya da sabah dün gecenin kaydını gir.</div></div>';
 let on=0,oS=0,dS=0,dn=0,qS=0,qn=0,br=0;const wk=[];
-rows.forEach(({s})=&gt;{const o=nightMin(s.off);oS+=o;if(o-T0&lt;=tT&amp;&amp;!(+s.br))on++;br+=+s.br||0;if(+s.q){qS+=+s.q;qn++;}
-if(s.wake&gt;s.off){dS+=(s.wake-s.off)/6e4;dn++;const w=new Date(s.wake);wk.push(w.getHours()*60+w.getMinutes());}});
-const n=rows.length,wA=wk.length?wk.reduce((a,b)=&gt;a+b,0)/wk.length:0,wD=wk.length?wk.reduce((a,b)=&gt;a+Math.abs(b-wA),0)/wk.length:0;
-const A0=1260,SP=840,P=m=&gt;Math.max(0,Math.min(100,(m-A0)/SP*100));
-const tl=rows.slice(0,14).map(({k,s})=&gt;{const o=nightMin(s.off),w=s.wake&gt;s.off?o+(s.wake-s.off)/6e4:o+10,v=st(k,h.id),c=v===2?'g':v===1?'s':v===0?'r':'';
-return`&lt;button class="slr" data-act="day" data-k="${k}"&gt;&lt;span&gt;${up(dateShort(k))}&lt;/span&gt;&lt;span class="slt"&gt;&lt;i style="left:${P(T0)}%"&gt;&lt;/i&gt;&lt;b class="${c}" style="left:${P(o)}%;width:${Math.max(1.5,P(w)-P(o)).toFixed(2)}%"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/button&gt;`;}).join('');
-return head+`&lt;div class="card"&gt;&lt;div class="rr"&gt;&lt;div&gt;&lt;div class="lbl"&gt;ORT. KARARTMA&lt;/div&gt;&lt;b&gt;${hm(oS/n)}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;${hm(T0)} UYUMU&lt;/div&gt;&lt;b style="color:var(--gold)"&gt;%${Math.round(on/n*100)}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;ORT. SÜRE&lt;/div&gt;&lt;b&gt;${dn?fmt1(dS/dn/60)+' sa':'—'}&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class="rr" style="margin-top:8px"&gt;&lt;div&gt;&lt;div class="lbl"&gt;ORT. UYANIŞ&lt;/div&gt;&lt;b&gt;${wk.length?hm(wA):'—'}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;KALİTE&lt;/div&gt;&lt;b&gt;${qn?fmt1(qS/qn)+'/5':'—'}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;IŞIK İHLALİ&lt;/div&gt;&lt;b style="color:var(--redT)"&gt;${br}&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class="sltl"&gt;${tl}&lt;/div&gt;&lt;div class="slax"&gt;&lt;span&gt;21&lt;/span&gt;&lt;span&gt;23&lt;/span&gt;&lt;span&gt;01&lt;/span&gt;&lt;span&gt;03&lt;/span&gt;&lt;span&gt;05&lt;/span&gt;&lt;span&gt;07&lt;/span&gt;&lt;span&gt;09&lt;/span&gt;&lt;span&gt;11&lt;/span&gt;&lt;/div&gt;
-&lt;div class="hint"&gt;${n} gece kaydı · dikey çizgi ${hm(T0)} hedefi · son 14 gece.${wk.length&gt;=3?' Uyanış sapması ±'+Math.round(wD)+' dk: vücut saatini en çok her gün aynı saatte kalkmak sabitler.':''}&lt;/div&gt;&lt;/div&gt;`;}
+rows.forEach(({s})=>{const o=nightMin(s.off);oS+=o;if(o-T0<=tT&&!(+s.br))on++;br+=+s.br||0;if(+s.q){qS+=+s.q;qn++;}
+if(s.wake>s.off){dS+=(s.wake-s.off)/6e4;dn++;const w=new Date(s.wake);wk.push(w.getHours()*60+w.getMinutes());}});
+const n=rows.length,wA=wk.length?wk.reduce((a,b)=>a+b,0)/wk.length:0,wD=wk.length?wk.reduce((a,b)=>a+Math.abs(b-wA),0)/wk.length:0;
+const A0=1260,SP=840,P=m=>Math.max(0,Math.min(100,(m-A0)/SP*100));
+const tl=rows.slice(0,14).map(({k,s})=>{const o=nightMin(s.off),w=s.wake>s.off?o+(s.wake-s.off)/6e4:o+10,v=st(k,h.id),c=v===2?'g':v===1?'s':v===0?'r':'';
+return`<button class="slr" data-act="day" data-k="${k}"><span>${up(dateShort(k))}</span><span class="slt"><i style="left:${P(T0)}%"></i><b class="${c}" style="left:${P(o)}%;width:${Math.max(1.5,P(w)-P(o)).toFixed(2)}%"></b></span></button>`;}).join('');
+return head+`<div class="card"><div class="rr"><div><div class="lbl">ORT. KARARTMA</div><b>${hm(oS/n)}</b></div><div><div class="lbl">${hm(T0)} UYUMU</div><b style="color:var(--gold)">%${Math.round(on/n*100)}</b></div><div><div class="lbl">ORT. SÜRE</div><b>${dn?fmt1(dS/dn/60)+' sa':'—'}</b></div></div>
+<div class="rr" style="margin-top:8px"><div><div class="lbl">ORT. UYANIŞ</div><b>${wk.length?hm(wA):'—'}</b></div><div><div class="lbl">KALİTE</div><b>${qn?fmt1(qS/qn)+'/5':'—'}</b></div><div><div class="lbl">IŞIK İHLALİ</div><b style="color:var(--redT)">${br}</b></div></div>
+<div class="sltl">${tl}</div><div class="slax"><span>21</span><span>23</span><span>01</span><span>03</span><span>05</span><span>07</span><span>09</span><span>11</span></div>
+<div class="hint">${n} gece kaydı · dikey çizgi ${hm(T0)} hedefi · son 14 gece.${wk.length>=3?' Uyanış sapması ±'+Math.round(wD)+' dk: vücut saatini en çok her gün aynı saatte kalkmak sabitler.':''}</div></div>`;}
 function renderRapor(){const T=todayKey(),z=stats(),len=S.settings.length,s0=S.settings.start,n=diffDays(s0,T)+1,cd=Math.min(len,Math.max(0,n)),en=z.ev.length||1,rec=recovery();
 if(!U.rw)U.rw=monday(T);
-$('#tab-rapor').innerHTML=`&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;KÜMÜLATİF KARARGÂH ÖZETİ&lt;/span&gt;&lt;/div&gt;
-&lt;div class="card"&gt;&lt;div class="lbl"&gt;FAZ 1 · TEMEL İNŞA VE ERİTME KAMPI&lt;/div&gt;&lt;div class="cn"&gt;&lt;b&gt;${cd}&lt;small&gt; / ${len} GÜN&lt;/small&gt;&lt;/b&gt;&lt;span class="chip${n&gt;len?' g':''}"&gt;${n&lt;1?'BAŞLAMADI':n&gt;len?'TAMAMLANDI':(len-cd)+' GÜN KALDI'}&lt;/span&gt;&lt;/div&gt;
-&lt;div class="thin" style="height:5px"&gt;&lt;span style="width:${cd/len*100}%"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="hint"&gt;${dateLong(s0)} → ${dateLong(addDays(s0,len-1))}&lt;/div&gt;&lt;/div&gt;
-&lt;div class="kpis"&gt;&lt;div class="kpi g"&gt;&lt;div class="lbl"&gt;TOPLAM ODAKLI MATEMATİK&lt;/div&gt;&lt;b&gt;${fmt1(z.math/60)}&lt;small&gt;sa&lt;/small&gt;&lt;/b&gt;&lt;div class="sub"&gt;günlük ort. ${dur(z.math/en)}&lt;/div&gt;&lt;/div&gt;
-&lt;div class="kpi g"&gt;&lt;div class="lbl"&gt;TOPLAM OKUNAN SAYFA&lt;/div&gt;&lt;b&gt;${fmt0(z.pages)}&lt;small&gt;sayfa&lt;/small&gt;&lt;/b&gt;&lt;div class="sub"&gt;günlük ort. ${fmt0(z.pages/en)} sayfa&lt;/div&gt;&lt;/div&gt;
-&lt;div class="kpi"&gt;&lt;div class="lbl"&gt;ORT. DİSİPLİN SKORU&lt;/div&gt;&lt;b&gt;%${z.avg}&lt;/b&gt;&lt;div class="sub"&gt;bugün %${dayScore(T)} · kusursuz gün ${z.perfect}&lt;/div&gt;&lt;/div&gt;
-&lt;div class="kpi"&gt;&lt;div class="lbl"&gt;MANİFESTO HİZALAMA&lt;/div&gt;&lt;b&gt;${z.man}&lt;small&gt;/ ${z.keys.length}&lt;/small&gt;&lt;/b&gt;&lt;div class="sub"&gt;seri ${manStreak()} gün · nefes ${fmt0(z.breath/60)} dk&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;HAFTALIK GÖRÜNÜM · PZT–PAZ&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;${weekChart(U.rw)}&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;KAMP HARİTASI · ${len} GÜN&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;${campGrid()}&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;CEPHE RAPORU&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;${S.habits.map(habitRow).join('')}&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;GERİ DÖNÜŞ HIZI&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;&lt;div class="rr"&gt;&lt;div&gt;&lt;div class="lbl"&gt;AKSATMA&lt;/div&gt;&lt;b&gt;${rec.miss}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;ERTESİ GÜN DÖNÜŞ&lt;/div&gt;&lt;b style="color:var(--gold)"&gt;${rec.back}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="lbl"&gt;ÇİFT AKSATMA&lt;/div&gt;&lt;b style="color:var(--redT)"&gt;${rec.dbl}&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class="hint"&gt;${rec.rate===null?'Henüz değerlendirilecek aksatma yok.':'Dönüş oranı %'+rec.rate+'. Ölçü düzenin hiç bozulmaması değil; bozulduğu an masaya dönme hızıdır.'}&lt;/div&gt;&lt;/div&gt;
+$('#tab-rapor').innerHTML=`<div class="sec"><span class="lbl g">KÜMÜLATİF KARARGÂH ÖZETİ</span></div>
+<div class="card"><div class="lbl">FAZ 1 · TEMEL İNŞA VE ERİTME KAMPI</div><div class="cn"><b>${cd}<small> / ${len} GÜN</small></b><span class="chip${n>len?' g':''}">${n<1?'BAŞLAMADI':n>len?'TAMAMLANDI':(len-cd)+' GÜN KALDI'}</span></div>
+<div class="thin" style="height:5px"><span style="width:${cd/len*100}%"></span></div><div class="hint">${dateLong(s0)} → ${dateLong(addDays(s0,len-1))}</div></div>
+<div class="kpis"><div class="kpi g"><div class="lbl">TOPLAM ODAKLI MATEMATİK</div><b>${fmt1(z.math/60)}<small>sa</small></b><div class="sub">günlük ort. ${dur(z.math/en)}</div></div>
+<div class="kpi g"><div class="lbl">TOPLAM OKUNAN SAYFA</div><b>${fmt0(z.pages)}<small>sayfa</small></b><div class="sub">günlük ort. ${fmt0(z.pages/en)} sayfa</div></div>
+<div class="kpi"><div class="lbl">ORT. DİSİPLİN SKORU</div><b>%${z.avg}</b><div class="sub">bugün %${dayScore(T)} · kusursuz gün ${z.perfect}</div></div>
+<div class="kpi"><div class="lbl">MANİFESTO HİZALAMA</div><b>${z.man}<small>/ ${z.keys.length}</small></b><div class="sub">seri ${manStreak()} gün · nefes ${fmt0(z.breath/60)} dk</div></div></div>
+<div class="sec"><span class="lbl g">HAFTALIK GÖRÜNÜM · PZT–PAZ</span></div><div class="card">${weekChart(U.rw)}</div>
+<div class="sec"><span class="lbl g">KAMP HARİTASI · ${len} GÜN</span></div><div class="card">${campGrid()}</div>
+<div class="sec"><span class="lbl g">CEPHE RAPORU</span></div><div class="card">${S.habits.map(habitRow).join('')}</div>
+<div class="sec"><span class="lbl g">GERİ DÖNÜŞ HIZI</span></div><div class="card"><div class="rr"><div><div class="lbl">AKSATMA</div><b>${rec.miss}</b></div><div><div class="lbl">ERTESİ GÜN DÖNÜŞ</div><b style="color:var(--gold)">${rec.back}</b></div><div><div class="lbl">ÇİFT AKSATMA</div><b style="color:var(--redT)">${rec.dbl}</b></div></div>
+<div class="hint">${rec.rate===null?'Henüz değerlendirilecek aksatma yok.':'Dönüş oranı %'+rec.rate+'. Ölçü düzenin hiç bozulmaması değil; bozulduğu an masaya dönme hızıdır.'}</div></div>
 ${sleepReport()}
-${S.habits.filter(h=&gt;h.subs&amp;&amp;h.subs.length).map(subReport).join('')}
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;ERİTME LİSTESİ&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;${booksReport()}&lt;/div&gt;&lt;div class="foot"&gt;KARARGÂH · FAZ 1&lt;/div&gt;`;}
+${S.habits.filter(h=>h.subs&&h.subs.length).map(subReport).join('')}
+<div class="sec"><span class="lbl g">ERİTME LİSTESİ</span></div><div class="card">${booksReport()}</div><div class="foot">KARARGÂH · FAZ 1</div>`;}
 
 /* ---------- AYARLAR ---------- */
-function booksList(){if(!S.books.length)return'&lt;div class="hint" style="margin:0"&gt;Liste boş — ilk kitabını aşağıdan ekle.&lt;/div&gt;';const ab=activeBook();
-return S.books.map((b,i)=&gt;`&lt;div class="li"&gt;&lt;span class="hn"&gt;${pad(i+1)}&lt;/span&gt;&lt;div class="lt"&gt;&lt;b&gt;${esc(b.title)}${b.final?' &lt;span class="chip g"&gt;HEDEF&lt;/span&gt;':''}&lt;/b&gt;&lt;small&gt;${b.done?'ERİTİLDİ':b===ab?'AKTİF':'SIRADA'} · ${bookLine(b)}&lt;/small&gt;&lt;/div&gt;&lt;button class="ib s" data-act="bUp" data-id="${b.id}"${i?'':' disabled'} aria-label="Yukarı"&gt;↑&lt;/button&gt;&lt;button class="ib s" data-act="bEdit" data-id="${b.id}" aria-label="Düzenle"&gt;✎&lt;/button&gt;&lt;/div&gt;`).join('');}
-const isSA=()=&gt;(window.matchMedia&amp;&amp;matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+function booksList(){if(!S.books.length)return'<div class="hint" style="margin:0">Liste boş — ilk kitabını aşağıdan ekle.</div>';const ab=activeBook();
+return S.books.map((b,i)=>`<div class="li"><span class="hn">${pad(i+1)}</span><div class="lt"><b>${esc(b.title)}${b.final?' <span class="chip g">HEDEF</span>':''}</b><small>${b.done?'ERİTİLDİ':b===ab?'AKTİF':'SIRADA'} · ${bookLine(b)}</small></div><button class="ib s" data-act="bUp" data-id="${b.id}"${i?'':' disabled'} aria-label="Yukarı">↑</button><button class="ib s" data-act="bEdit" data-id="${b.id}" aria-label="Düzenle">✎</button></div>`).join('');}
+const isSA=()=>(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
 function renderAyar(){const s=S.settings;
-$('#tab-ayar').innerHTML=`&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;KAMP AYARLARI&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;
-&lt;label class="fl"&gt;Faz 1 başlangıç tarihi&lt;/label&gt;&lt;input type="date" class="inp" data-set="start" value="${s.start}"&gt;
-&lt;div class="row2" style="margin-top:14px"&gt;&lt;div&gt;&lt;label class="fl"&gt;Kamp süresi (gün)&lt;/label&gt;&lt;input type="number" inputmode="numeric" class="inp" data-set="length" value="${s.length}"&gt;&lt;/div&gt;
-&lt;div&gt;&lt;label class="fl"&gt;Gün dönümü saati&lt;/label&gt;&lt;select class="inp" data-set="rollover"&gt;${[0,1,2,3,4,5,6].map(x=&gt;`&lt;option value="${x}"${x===s.rollover?' selected':''}&gt;${pad(x)}:00&lt;/option&gt;`).join('')}&lt;/select&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class="hint"&gt;Bu saatten önce yapılan işaretlemeler önceki güne yazılır; gece yarısını geçen kapanışlar doğru güne düşer.&lt;/div&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;MANİFESTO&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;&lt;button class="btn" data-act="manEdit"&gt;MANİFESTO METNİNİ DÜZENLE&lt;/button&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;ALIŞKANLIKLAR · ${S.habits.length} BİRLİK&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;&lt;div&gt;${S.habits.map((h,i)=&gt;`&lt;div class="li"&gt;&lt;span class="hn"&gt;${pad(i+1)}&lt;/span&gt;&lt;div class="lt"&gt;&lt;b&gt;${esc(up(h.identity))}&lt;/b&gt;&lt;small&gt;${esc(h.time)}&lt;/small&gt;&lt;/div&gt;&lt;button class="btn sm" data-act="hEdit" data-h="${h.id}"&gt;DÜZENLE&lt;/button&gt;&lt;/div&gt;`).join('')}&lt;/div&gt;
-&lt;button class="btn sm red" style="width:100%;margin-top:12px" data-act="hReset"&gt;FAZ 1 VARSAYILANLARINA DÖN&lt;/button&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;KARARTMA DESTEĞİ&lt;/span&gt;&lt;/div&gt;&lt;div class="card txt"&gt;
-&lt;p&gt;Uygulama kapalıyken bildirim gönderemez; karartma emrini telefonun kendi araçlarına da ver:&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;iPhone:&lt;/b&gt; Ayarlar › Odak › Uyku → 23:00–07:00 planla. Ekran Süresi › Kapalı Kalma Süresi ile gece uygulamaları kilitle.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Android:&lt;/b&gt; Ayarlar › Dijital Denge › Uyku vakti modu → 23:00'te gri ekran ve Rahatsız Etmeyin.&lt;/p&gt;
-&lt;p style="color:var(--dim)"&gt;Gece zorunlu ışık gerekirse loş kırmızı/amber ışık kullan; beyaz ve mavi ışık uykuyu en çok geciktirir. Sabah ilk 30 dakikada gün ışığı al.&lt;/p&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;ERİTME LİSTESİ · KİTAP SIRASI&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;&lt;div&gt;${booksList()}&lt;/div&gt;
-&lt;div class="addb"&gt;&lt;input class="inp" id="nbT" placeholder="Kitap adı" autocomplete="off"&gt;&lt;input class="inp" id="nbP" type="number" inputmode="numeric" placeholder="Sayfa"&gt;&lt;button class="btn gl" data-act="bAdd"&gt;SIRAYA EKLE&lt;/button&gt;&lt;/div&gt;
-&lt;div class="hint"&gt;Günlük sayfa girişi otomatik olarak ilk eritilmemiş kitaba yazılır. Yeni kitaplar hedef kitabın (Napolyon) önüne eklenir.&lt;/div&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;VERİ &amp; YEDEK&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;&lt;div class="hint" style="margin:0 0 12px"&gt;Tüm veriler yalnızca bu cihazda. Son yedek: &lt;b style="color:var(--tx)"&gt;${S.lastBackup?ago(S.lastBackup):'hiç alınmadı'}&lt;/b&gt;&lt;/div&gt;
-&lt;button class="btn gold" data-act="backup"&gt;YEDEĞİ AL (JSON)&lt;/button&gt;&lt;div class="row" style="margin-top:8px"&gt;&lt;button class="btn" data-act="copy"&gt;PANOYA KOPYALA&lt;/button&gt;&lt;button class="btn" data-act="imp"&gt;YEDEK YÜKLE&lt;/button&gt;&lt;/div&gt;
-&lt;button class="btn" style="margin-top:8px" data-act="paste"&gt;METİNDEN GERİ YÜKLE&lt;/button&gt;&lt;input type="file" id="impFile" accept=".json,application/json,text/plain" hidden&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl g"&gt;ANA EKRANA EKLE&lt;/span&gt;&lt;/div&gt;&lt;div class="card txt"&gt;${isSA()?'&lt;p&gt;&lt;b&gt;✓ Uygulama modunda çalışıyor.&lt;/b&gt;&lt;/p&gt;':''}
-&lt;p&gt;&lt;b&gt;iPhone:&lt;/b&gt; Safari'de aç → Paylaş → &lt;b&gt;Ana Ekrana Ekle&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Android:&lt;/b&gt; Chrome'da aç → ⋮ menü → &lt;b&gt;Ana ekrana ekle&lt;/b&gt; / &lt;b&gt;Uygulamayı yükle&lt;/b&gt;.&lt;/p&gt;
-&lt;p style="color:var(--dim)"&gt;iPhone'da ana ekran uygulaması Safari'den ayrı hafıza kullanır; verilerini hep aynı ikondan gir.&lt;/p&gt;&lt;/div&gt;
-&lt;div class="sec"&gt;&lt;span class="lbl"&gt;TEHLİKELİ BÖLGE&lt;/span&gt;&lt;/div&gt;&lt;div class="card"&gt;&lt;button class="btn red" data-act="wipe"&gt;TÜM VERİLERİ SİL&lt;/button&gt;&lt;/div&gt;&lt;div class="foot"&gt;KARARGÂH · FAZ 1 · v1.1&lt;/div&gt;`;}
+$('#tab-ayar').innerHTML=`<div class="sec"><span class="lbl g">KAMP AYARLARI</span></div><div class="card">
+<label class="fl">Faz 1 başlangıç tarihi</label><input type="date" class="inp" data-set="start" value="${s.start}">
+<div class="row2" style="margin-top:14px"><div><label class="fl">Kamp süresi (gün)</label><input type="number" inputmode="numeric" class="inp" data-set="length" value="${s.length}"></div>
+<div><label class="fl">Gün dönümü saati</label><select class="inp" data-set="rollover">${[0,1,2,3,4,5,6].map(x=>`<option value="${x}"${x===s.rollover?' selected':''}>${pad(x)}:00</option>`).join('')}</select></div></div>
+<div class="hint">Bu saatten önce yapılan işaretlemeler önceki güne yazılır; gece yarısını geçen kapanışlar doğru güne düşer.</div></div>
+<div class="sec"><span class="lbl g">MANİFESTO</span></div><div class="card"><button class="btn" data-act="manEdit">MANİFESTO METNİNİ DÜZENLE</button></div>
+<div class="sec"><span class="lbl g">ALIŞKANLIKLAR · ${S.habits.length} BİRLİK</span></div><div class="card"><div>${S.habits.map((h,i)=>`<div class="li"><span class="hn">${pad(i+1)}</span><div class="lt"><b>${esc(up(h.identity))}</b><small>${esc(h.time)}</small></div><button class="btn sm" data-act="hEdit" data-h="${h.id}">DÜZENLE</button></div>`).join('')}</div>
+<button class="btn sm red" style="width:100%;margin-top:12px" data-act="hReset">FAZ 1 VARSAYILANLARINA DÖN</button></div>
+<div class="sec"><span class="lbl g">KARARTMA DESTEĞİ</span></div><div class="card txt">
+<p>Uygulama kapalıyken bildirim gönderemez; karartma emrini telefonun kendi araçlarına da ver:</p>
+<p><b>iPhone:</b> Ayarlar › Odak › Uyku → 23:00–07:00 planla. Ekran Süresi › Kapalı Kalma Süresi ile gece uygulamaları kilitle.</p>
+<p><b>Android:</b> Ayarlar › Dijital Denge › Uyku vakti modu → 23:00'te gri ekran ve Rahatsız Etmeyin.</p>
+<p style="color:var(--dim)">Gece zorunlu ışık gerekirse loş kırmızı/amber ışık kullan; beyaz ve mavi ışık uykuyu en çok geciktirir. Sabah ilk 30 dakikada gün ışığı al.</p></div>
+<div class="sec"><span class="lbl g">ERİTME LİSTESİ · KİTAP SIRASI</span></div><div class="card"><div>${booksList()}</div>
+<div class="addb"><input class="inp" id="nbT" placeholder="Kitap adı" autocomplete="off"><input class="inp" id="nbP" type="number" inputmode="numeric" placeholder="Sayfa"><button class="btn gl" data-act="bAdd">SIRAYA EKLE</button></div>
+<div class="hint">Günlük sayfa girişi otomatik olarak ilk eritilmemiş kitaba yazılır. Yeni kitaplar hedef kitabın (Napolyon) önüne eklenir.</div></div>
+<div class="sec"><span class="lbl g">VERİ & YEDEK</span></div><div class="card"><div class="hint" style="margin:0 0 12px">Tüm veriler yalnızca bu cihazda. Son yedek: <b style="color:var(--tx)">${S.lastBackup?ago(S.lastBackup):'hiç alınmadı'}</b></div>
+<button class="btn gold" data-act="backup">YEDEĞİ AL (JSON)</button><div class="row" style="margin-top:8px"><button class="btn" data-act="copy">PANOYA KOPYALA</button><button class="btn" data-act="imp">YEDEK YÜKLE</button></div>
+<button class="btn" style="margin-top:8px" data-act="paste">METİNDEN GERİ YÜKLE</button><input type="file" id="impFile" accept=".json,application/json,text/plain" hidden></div>
+<div class="sec"><span class="lbl g">ANA EKRANA EKLE</span></div><div class="card txt">${isSA()?'<p><b>✓ Uygulama modunda çalışıyor.</b></p>':''}
+<p><b>iPhone:</b> Safari'de aç → Paylaş → <b>Ana Ekrana Ekle</b>.</p><p><b>Android:</b> Chrome'da aç → ⋮ menü → <b>Ana ekrana ekle</b> / <b>Uygulamayı yükle</b>.</p>
+<p style="color:var(--dim)">iPhone'da ana ekran uygulaması Safari'den ayrı hafıza kullanır; verilerini hep aynı ikondan gir.</p></div>
+<div class="sec"><span class="lbl">TEHLİKELİ BÖLGE</span></div><div class="card"><button class="btn red" data-act="wipe">TÜM VERİLERİ SİL</button></div><div class="foot">KARARGÂH · FAZ 1 · v1.1</div>`;}
 
 /* ---------- genel ---------- */
-function renderHeader(){const T=todayKey(),n=diffDays(S.settings.start,T)+1,l=S.settings.length;$('#campLbl').textContent=n&lt;1?'KAMPA '+(1-n)+' GÜN':n&gt;l?'FAZ 1 TAMAM':'GÜN '+pad(n)+'/'+l;}
-const tick=()=&gt;{if(S.timer){const t=hms(Date.now()-S.timer.start);$$('[data-tick]').forEach(e=&gt;e.textContent=t);}
-if(S.sleep){const t=hms(Date.now()-S.sleep.off);$$('[data-sl]').forEach(e=&gt;e.textContent=t);const v=$('#slbV');if(v&amp;&amp;!$('#slbar').hidden)v.textContent=t;}renderSleepFs();};
-const renderTimer=()=&gt;{$('#tbar').hidden=!S.timer;tick();};
-const updateDot=()=&gt;{$('#dotAyar').hidden=!(Object.keys(S.days).length&gt;2&amp;&amp;Date.now()-(S.lastBackup||0)&gt;7*864e5);};
+function renderHeader(){const T=todayKey(),n=diffDays(S.settings.start,T)+1,l=S.settings.length;$('#campLbl').textContent=n<1?'KAMPA '+(1-n)+' GÜN':n>l?'FAZ 1 TAMAM':'GÜN '+pad(n)+'/'+l;}
+const tick=()=>{if(S.timer){const t=hms(Date.now()-S.timer.start);$$('[data-tick]').forEach(e=>e.textContent=t);}
+if(S.sleep){const t=hms(Date.now()-S.sleep.off);$$('[data-sl]').forEach(e=>e.textContent=t);const v=$('#slbV');if(v&&!$('#slbar').hidden)v.textContent=t;}renderSleepFs();};
+const renderTimer=()=>{$('#tbar').hidden=!S.timer;tick();};
+const updateDot=()=>{$('#dotAyar').hidden=!(Object.keys(S.days).length>2&&Date.now()-(S.lastBackup||0)>7*864e5);};
 function renderSleepBar(){const bar=$('#slbar'),h=sleepH(),T=todayKey();let on=false;
-if(h&amp;&amp;S.sleep){on=true;$('#slbT').innerHTML='KARARTMA AKTİF&lt;br&gt;&lt;span style="color:var(--mut)"&gt;KARARTMA: '+timeOf(S.sleep.off)+'&lt;/span&gt;';$('#slbV').textContent=hms(Date.now()-S.sleep.off);$('#slbB').textContent='EKRAN';$('#slbB').dataset.act='slOpen';}
-else if(h&amp;&amp;!(D(T).sl&amp;&amp;D(T).sl.off)&amp;&amp;st(T,h.id)===undefined&amp;&amp;slWin(30)){on=true;const n=nowN(),t0=slTarget(h);
-$('#slbT').innerHTML=(n&lt;t0?'KARARTMAYA '+up(dur(t0-n)):'KARARTMA ZAMANI')+'&lt;br&gt;&lt;span style="color:var(--mut)"&gt;IŞIKLAR VE EKRANLAR KAPANIR&lt;/span&gt;';$('#slbV').textContent=hm(t0);$('#slbB').textContent='BAŞLAT';$('#slbB').dataset.act='slStart';}
+if(h&&S.sleep){on=true;$('#slbT').innerHTML='KARARTMA AKTİF<br><span style="color:var(--mut)">KARARTMA: '+timeOf(S.sleep.off)+'</span>';$('#slbV').textContent=hms(Date.now()-S.sleep.off);$('#slbB').textContent='EKRAN';$('#slbB').dataset.act='slOpen';}
+else if(h&&!(D(T).sl&&D(T).sl.off)&&st(T,h.id)===undefined&&slWin(30)){on=true;const n=nowN(),t0=slTarget(h);
+$('#slbT').innerHTML=(n<t0?'KARARTMAYA '+up(dur(t0-n)):'KARARTMA ZAMANI')+'<br><span style="color:var(--mut)">IŞIKLAR VE EKRANLAR KAPANIR</span>';$('#slbV').textContent=hm(t0);$('#slbB').textContent='BAŞLAT';$('#slbB').dataset.act='slStart';}
 bar.hidden=!on;}
 function renderAll(){renderHeader();renderTimer();renderSleepBar();updateDot();if(U.tab==='op')renderOp();else if(U.tab==='rapor')renderRapor();else renderAyar();}
-function switchTab(t){U.tab=t;$$('.tab').forEach(x=&gt;x.classList.toggle('on',x.id==='tab-'+t));$$('.tb').forEach(x=&gt;x.classList.toggle('on',x.dataset.t===t));renderAll();window.scrollTo(0,0);}
-function goDay(k){const T=todayKey();if(!k||k&gt;T)k=T;if(k&lt;minKey())k=minKey();U.sel=k;U.manOpen=null;U.exp={};}
-function openSheet(t,body,btns){$('#shT').textContent=t;$('#shB').innerHTML=body;$('#shF').innerHTML=(btns||[]).map(b=&gt;`&lt;button class="btn ${b.cls||''}" data-act="${b.act}"${b.id?` data-id="${b.id}"`:''}&gt;${b.label}&lt;/button&gt;`).join('');$('#sheet').classList.add('on');}
-const closeSheet=()=&gt;{$('#sheet').classList.remove('on');U.slf=null;};
-const openFs=id=&gt;{const e=$('#'+id);e.classList.add('on');e.scrollTop=0;document.body.style.overflow='hidden';};
-const closeFs=id=&gt;{$('#'+id).classList.remove('on');document.body.style.overflow='';};
+function switchTab(t){U.tab=t;$$('.tab').forEach(x=>x.classList.toggle('on',x.id==='tab-'+t));$$('.tb').forEach(x=>x.classList.toggle('on',x.dataset.t===t));renderAll();window.scrollTo(0,0);}
+function goDay(k){const T=todayKey();if(!k||k>T)k=T;if(k<minKey())k=minKey();U.sel=k;U.manOpen=null;U.exp={};}
+function openSheet(t,body,btns){$('#shT').textContent=t;$('#shB').innerHTML=body;$('#shF').innerHTML=(btns||[]).map(b=>`<button class="btn ${b.cls||''}" data-act="${b.act}"${b.id?` data-id="${b.id}"`:''}>${b.label}</button>`).join('');$('#sheet').classList.add('on');}
+const closeSheet=()=>{$('#sheet').classList.remove('on');U.slf=null;};
+const openFs=id=>{const e=$('#'+id);e.classList.add('on');e.scrollTop=0;document.body.style.overflow='hidden';};
+const closeFs=id=>{$('#'+id).classList.remove('on');document.body.style.overflow='';};
 function doImport(txt){let o;try{o=JSON.parse(txt);}catch(e){toast('Geçersiz yedek');return;}
 if(!o||typeof o!=='object'||!o.days){toast('Bu bir Karargâh yedeği değil');return;}
 if(!confirm('Yedek yüklensin mi? Mevcut veriler bu yedekle DEĞİŞTİRİLECEK.'))return;
 S=normalize(o);save();U.today=todayKey();goDay(U.today);closeSheet();renderAll();toast('Yedek geri yüklendi');}
 /* karartma ekranı ve gece raporu */
-const theme=c=&gt;{const m=$('meta[name="theme-color"]');if(m)m.setAttribute('content',c);};
-const slFsOn=()=&gt;$('#fsSleep').classList.contains('on');
+const theme=c=>{const m=$('meta[name="theme-color"]');if(m)m.setAttribute('content',c);};
+const slFsOn=()=>$('#fsSleep').classList.contains('on');
 function openSleepFs(){if(!S.sleep)return;openFs('fsSleep');theme('#000000');renderSleepFs();}
 function closeSleepFs(){if(!slFsOn())return;closeFs('fsSleep');theme('#0d0f12');}
 function renderSleepFs(){if(!slFsOn())return;if(!S.sleep){closeSleepFs();return;}
-const n=new Date(),el=Date.now()-S.sleep.off,hr=n.getHours(),mor=el&gt;=3*36e5&amp;&amp;hr&gt;=5&amp;&amp;hr&lt;15;
+const n=new Date(),el=Date.now()-S.sleep.off,hr=n.getHours(),mor=el>=3*36e5&&hr>=5&&hr<15;
 $('#slClk').textContent=pad(hr)+':'+pad(n.getMinutes());
 $('#slL0').textContent=mor?'GÜNAYDIN, KOMUTAN':'IŞIKLAR KAPALI · EKRAN KAPALI';
 $('#slL1').textContent='KARARTMA: '+timeOf(S.sleep.off);
 $('#slL2').textContent='KARANLIKTA '+up(dur(el/6e4));
-$('#slTip').textContent=mor?'Perdeyi aç; ilk 30 dakikada 10 dakika gün ışığı al. Vücut saatin bu sinyalle kurulur.':el&lt;3*36e5?'Telefonu kilitle ve yataktan uzağa koy. Karanlıkta yalnızca 4-4-6 nefes. Uyku zorlanmaz; karanlık onu çağırır.':'Uyandıysan ekrana bakma. Gözler kapalı, nefes yavaş, omuzlar gevşek. Karartma sürüyor.';}
+$('#slTip').textContent=mor?'Perdeyi aç; ilk 30 dakikada 10 dakika gün ışığı al. Vücut saatin bu sinyalle kurulur.':el<3*36e5?'Telefonu kilitle ve yataktan uzağa koy. Karanlıkta yalnızca 4-4-6 nefes. Uyku zorlanmaz; karanlık onu çağırır.':'Uyandıysan ekrana bakma. Gözler kapalı, nefes yavaş, omuzlar gevşek. Karartma sürüyor.';}
 function openSlReport(k){const h=sleepH();if(!h||!k)return;const d=D(k),sl=d.sl||{},v=st(k,h.id);
 const m=/(\d{1,2})[:.](\d{2})\s*[–—-]\s*(\d{1,2})[:.](\d{2})/.exec(h.time||'');
-U.slf={k,off:sl.off?timeOf(sl.off):hm(slTarget(h)),wake:sl.wake?timeOf(sl.wake):sl.off?'':m?pad(+m[3])+':'+m[4]:'07:00',br:+sl.br||0,q:+sl.q||0,v,vm:v!==undefined&amp;&amp;!sl.auto};
-openSheet('GECE RAPORU · '+up(dateShort(k)),`&lt;div class="hint" style="margin:0"&gt;${esc(dateLong(k))} gecesi · hedef ${hm(slTarget(h))} · TAM ≤ +${tolT(h)} dk · MİN ≤ +${tolM(h)} dk&lt;/div&gt;
-&lt;div class="row2"&gt;&lt;div&gt;&lt;label class="fl" for="slOff"&gt;Işıklar kapandı&lt;/label&gt;&lt;input type="time" class="inp" id="slOff" value="${U.slf.off}"&gt;&lt;/div&gt;&lt;div&gt;&lt;label class="fl" for="slWake"&gt;Uyanış&lt;/label&gt;&lt;input type="time" class="inp" id="slWake" value="${U.slf.wake}"&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class="hint" id="slSum"&gt;&lt;/div&gt;
-&lt;label class="fl"&gt;Gece ışık / ekran ihlali &lt;small&gt;(karanlıkta ekrana ya da lambaya dönüş)&lt;/small&gt;&lt;/label&gt;
-&lt;div class="stp"&gt;&lt;button class="qk" data-act="slBr" data-n="-1"&gt;−&lt;/button&gt;&lt;div class="cnt" id="slBrV"&gt;0&lt;/div&gt;&lt;button class="qk" data-act="slBr" data-n="1"&gt;+&lt;/button&gt;&lt;/div&gt;
-&lt;label class="fl"&gt;Uyku kalitesi &lt;small&gt;(1 kötü · 5 mükemmel)&lt;/small&gt;&lt;/label&gt;
-&lt;div class="qrow"&gt;${[1,2,3,4,5].map(i=&gt;`&lt;button class="cb" data-act="slQ" data-n="${i}"&gt;${i}&lt;/button&gt;`).join('')}&lt;/div&gt;
-&lt;label class="fl"&gt;Değerlendirme&lt;/label&gt;
-&lt;div class="seg" style="margin-top:0"&gt;&lt;button class="sb t" data-act="slV" data-v="2"&gt;&lt;b&gt;TAM HEDEF&lt;/b&gt;&lt;small&gt;%100&lt;/small&gt;&lt;/button&gt;&lt;button class="sb m" data-act="slV" data-v="1"&gt;&lt;b&gt;MİNİMUM&lt;/b&gt;&lt;small&gt;%50&lt;/small&gt;&lt;/button&gt;&lt;button class="sb x" data-act="slV" data-v="0"&gt;&lt;b&gt;YAPILMADI&lt;/b&gt;&lt;small&gt;%0&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;
-&lt;div class="hint" id="slSug"&gt;&lt;/div&gt;`,[{label:'KAYDET',cls:'gold',act:'slSave'}].concat(sl.off?[{label:'KAYDI SİL',cls:'red',act:'slDel'}]:[]));slfPaint();}
+U.slf={k,off:sl.off?timeOf(sl.off):hm(slTarget(h)),wake:sl.wake?timeOf(sl.wake):sl.off?'':m?pad(+m[3])+':'+m[4]:'07:00',br:+sl.br||0,q:+sl.q||0,v,vm:v!==undefined&&!sl.auto};
+openSheet('GECE RAPORU · '+up(dateShort(k)),`<div class="hint" style="margin:0">${esc(dateLong(k))} gecesi · hedef ${hm(slTarget(h))} · TAM ≤ +${tolT(h)} dk · MİN ≤ +${tolM(h)} dk</div>
+<div class="row2"><div><label class="fl" for="slOff">Işıklar kapandı</label><input type="time" class="inp" id="slOff" value="${U.slf.off}"></div><div><label class="fl" for="slWake">Uyanış</label><input type="time" class="inp" id="slWake" value="${U.slf.wake}"></div></div>
+<div class="hint" id="slSum"></div>
+<label class="fl">Gece ışık / ekran ihlali <small>(karanlıkta ekrana ya da lambaya dönüş)</small></label>
+<div class="stp"><button class="qk" data-act="slBr" data-n="-1">−</button><div class="cnt" id="slBrV">0</div><button class="qk" data-act="slBr" data-n="1">+</button></div>
+<label class="fl">Uyku kalitesi <small>(1 kötü · 5 mükemmel)</small></label>
+<div class="qrow">${[1,2,3,4,5].map(i=>`<button class="cb" data-act="slQ" data-n="${i}">${i}</button>`).join('')}</div>
+<label class="fl">Değerlendirme</label>
+<div class="seg" style="margin-top:0"><button class="sb t" data-act="slV" data-v="2"><b>TAM HEDEF</b><small>%100</small></button><button class="sb m" data-act="slV" data-v="1"><b>MİNİMUM</b><small>%50</small></button><button class="sb x" data-act="slV" data-v="0"><b>YAPILMADI</b><small>%0</small></button></div>
+<div class="hint" id="slSug"></div>`,[{label:'KAYDET',cls:'gold',act:'slSave'}].concat(sl.off?[{label:'KAYDI SİL',cls:'red',act:'slDel'}]:[]));slfPaint();}
 function slfPaint(){const f=U.slf,h=sleepH();if(!f||!h||!$('#slOff'))return;
-const off=offTsOf(f.k,f.off),wake=off&amp;&amp;f.wake?afterTs(off,f.wake):0,sug=slSug(h,off,f.br);if(!f.vm)f.v=sug;
+const off=offTsOf(f.k,f.off),wake=off&&f.wake?afterTs(off,f.wake):0,sug=slSug(h,off,f.br);if(!f.vm)f.v=sug;
 $('#slSum').textContent=off?'Karartma '+lateTxt(h,off)+(wake?' · karanlıkta '+dur((wake-off)/6e4):' · uyanış saatini gir'):'Işıkların kapandığı saati gir.';
 $('#slBrV').textContent=f.br;
-$$('#shB [data-act="slQ"]').forEach(b=&gt;b.classList.toggle('on',+b.dataset.n===f.q));
-$$('#shB [data-act="slV"]').forEach(b=&gt;b.classList.toggle('on',f.v!==undefined&amp;&amp;+b.dataset.v===f.v));
-$('#slSug').textContent=sug===undefined?'':'Kurala göre öneri: '+VL[sug]+(f.vm&amp;&amp;f.v!==sug?' · senin seçimin korunuyor':'');}
+$$('#shB [data-act="slQ"]').forEach(b=>b.classList.toggle('on',+b.dataset.n===f.q));
+$$('#shB [data-act="slV"]').forEach(b=>b.classList.toggle('on',f.v!==undefined&&+b.dataset.v===f.v));
+$('#slSug').textContent=sug===undefined?'':'Kurala göre öneri: '+VL[sug]+(f.vm&&f.v!==sug?' · senin seçimin korunuyor':'');}
 /* nefes */
 const B={run:false,target:600,acc:0,t0:0,raf:0,ph:-1,lock:null,saved:false};
 async function getLock(){try{if('wakeLock'in navigator)B.lock=await navigator.wakeLock.request('screen');}catch(e){}}
-function relLock(){try{B.lock&amp;&amp;B.lock.release();}catch(e){}B.lock=null;}
-function brUI(el){const pos=(el%14000)/1000,ph=pos&lt;4?0:pos&lt;8?1:2,S0=[0,4,8],L=[4,4,6];
+function relLock(){try{B.lock&&B.lock.release();}catch(e){}B.lock=null;}
+function brUI(el){const pos=(el%14000)/1000,ph=pos<4?0:pos<8?1:2,S0=[0,4,8],L=[4,4,6];
 if(B.run){if(ph!==B.ph){B.ph=ph;buzz(ph===0?30:15);$('#brPh').textContent=['NEFES AL','TUT','VER'][ph];}$('#brN').textContent=Math.max(1,Math.ceil(S0[ph]+L[ph]-pos));}
-for(let i=0;i&lt;3;i++)$('#brS'+i).style.width=(el===0?0:i&lt;ph?100:i&gt;ph?0:(pos-S0[i])/L[i]*100)+'%';
+for(let i=0;i<3;i++)$('#brS'+i).style.width=(el===0?0:i<ph?100:i>ph?0:(pos-S0[i])/L[i]*100)+'%';
 $('#brT').textContent=mmss(el)+' / '+mmss(B.target*1000);$('#brC').textContent=Math.floor(el/14000)+' DÖNGÜ';$('#brP').style.width=Math.min(100,el/(B.target*10))+'%';}
 function brLoop(){if(!B.run)return;const el=B.acc+performance.now()-B.t0;
-if(el&gt;=B.target*1000){B.acc=B.target*1000;B.run=false;relLock();brUI(B.acc);brSave(true);return;}brUI(el);B.raf=requestAnimationFrame(brLoop);}
+if(el>=B.target*1000){B.acc=B.target*1000;B.run=false;relLock();brUI(B.acc);brSave(true);return;}brUI(el);B.raf=requestAnimationFrame(brLoop);}
 function brSave(full){if(B.saved)return;B.saved=true;const sec=Math.round(B.acc/1000);
-if(sec&gt;=20){const d=DW(todayKey());d.breath=(+d.breath||0)+sec;save();}
+if(sec>=20){const d=DW(todayKey());d.breath=(+d.breath||0)+sec;save();}
 if(full){$('#brPh').textContent='SEANS TAMAMLANDI';$('#brN').textContent='✓';$('#brGo').textContent='YENİ SEANS';buzz([30,80,30,80,30]);}}
-const brPause=()=&gt;{if(B.run){B.acc+=performance.now()-B.t0;B.run=false;cancelAnimationFrame(B.raf);relLock();}};
+const brPause=()=>{if(B.run){B.acc+=performance.now()-B.t0;B.run=false;cancelAnimationFrame(B.raf);relLock();}};
 
 /* ---------- aksiyonlar ---------- */
 const A={
-tab:el=&gt;switchTab(el.dataset.t),
-prev:()=&gt;{goDay(addDays(U.sel,-1));renderOp();},next:()=&gt;{goDay(addDays(U.sel,1));renderOp();},today:()=&gt;{goDay(todayKey());renderOp();},
-day:el=&gt;{goDay(el.dataset.k);if(U.tab!=='op')switchTab('op');else{renderOp();window.scrollTo(0,0);}},
-set:el=&gt;{const id=el.dataset.h,v=+el.dataset.v,k=U.sel;if(k&gt;todayKey())return;const d=DW(k);d.h=d.h||{};const bp=counts(k).p;
-if(d.h[id]===v)delete d.h[id];else d.h[id]=v;const sh=sleepH();if(sh&amp;&amp;sh.id===id&amp;&amp;d.sl)delete d.sl.auto;U.exp[id]=false;save();buzz(v===2?[10,40,10]:12);renderOpDay();renderFront();renderHabits();renderSleepBar();
-const c=counts(k);if(bp&gt;0&amp;&amp;c.p===0)toast('GÜN KAPANDI · DİSİPLİN SKORU %'+dayScore(k));else if(d.h[id]===1)toast('Minimum korundu — zincir kırılmadı.');},
-sub:el=&gt;{const d=DW(U.sel);d.sub=d.sub||{};const a=d.sub[el.dataset.h]=d.sub[el.dataset.h]||[],j=+el.dataset.j;a[j]=!a[j];save();buzz(8);renderHabits();},
-exp:el=&gt;{const id=el.dataset.h;U.exp[id]=!U.exp[id];renderHabits();},
-goCard:el=&gt;{const c=$('#hc-'+el.dataset.h);if(c)c.scrollIntoView({behavior:'smooth',block:'start'});},
-oneFront:()=&gt;{S.settings.oneFront=!S.settings.oneFront;U.exp={};save();renderFront();renderHabits();toast(S.settings.oneFront?'Tek cephe: diğer birlikler kışlada.':'Tüm cepheler açık.');},
-manToggle:()=&gt;{U.manOpen=!$('#opMan .mcard').classList.contains('open');renderMan();},
-manRead:()=&gt;{const k=U.sel,T=todayKey();if(k&gt;T)return;const d=DW(k);
+tab:el=>switchTab(el.dataset.t),
+prev:()=>{goDay(addDays(U.sel,-1));renderOp();},next:()=>{goDay(addDays(U.sel,1));renderOp();},today:()=>{goDay(todayKey());renderOp();},
+day:el=>{goDay(el.dataset.k);if(U.tab!=='op')switchTab('op');else{renderOp();window.scrollTo(0,0);}},
+set:el=>{const id=el.dataset.h,v=+el.dataset.v,k=U.sel;if(k>todayKey())return;const d=DW(k);d.h=d.h||{};const bp=counts(k).p;
+if(d.h[id]===v)delete d.h[id];else d.h[id]=v;const sh=sleepH();if(sh&&sh.id===id&&d.sl)delete d.sl.auto;U.exp[id]=false;save();buzz(v===2?[10,40,10]:12);renderOpDay();renderFront();renderHabits();renderSleepBar();
+const c=counts(k);if(bp>0&&c.p===0)toast('GÜN KAPANDI · DİSİPLİN SKORU %'+dayScore(k));else if(d.h[id]===1)toast('Minimum korundu — zincir kırılmadı.');},
+sub:el=>{const d=DW(U.sel);d.sub=d.sub||{};const a=d.sub[el.dataset.h]=d.sub[el.dataset.h]||[],j=+el.dataset.j;a[j]=!a[j];save();buzz(8);renderHabits();},
+exp:el=>{const id=el.dataset.h;U.exp[id]=!U.exp[id];renderHabits();},
+goCard:el=>{const c=$('#hc-'+el.dataset.h);if(c)c.scrollIntoView({behavior:'smooth',block:'start'});},
+oneFront:()=>{S.settings.oneFront=!S.settings.oneFront;U.exp={};save();renderFront();renderHabits();toast(S.settings.oneFront?'Tek cephe: diğer birlikler kışlada.':'Tüm cepheler açık.');},
+manToggle:()=>{U.manOpen=!$('#opMan .mcard').classList.contains('open');renderMan();},
+manRead:()=>{const k=U.sel,T=todayKey();if(k>T)return;const d=DW(k);
 if(d.man){if(!confirm('Bu günün manifesto onayı geri alınsın mı?'))return;delete d.man;}
 else{d.man=k===T?Date.now():1;buzz([15,60,15]);toast('Zihin hizalandı. Tek cephe, tek emir.');U.manOpen=false;}
 save();closeFs('fsRead');renderMan();renderHabits();},
-reader:()=&gt;{$('#rdBody').innerHTML=manHTML(S.manifesto);const r=D(U.sel).man,b=$('#rdBtn');b.className='btn '+(r?'gl':'gold');b.textContent=r?'✓ SESLİ OKUNDU VE HİZALANDI':'BUGÜN SESLİ OKUNDU VE HİZALANDI';openFs('fsRead');},
-rdClose:()=&gt;closeFs('fsRead'),
-manEdit:()=&gt;openSheet('MANİFESTO METNİ',`&lt;textarea class="ta" id="mTxt" style="min-height:52vh;font-family:var(--serif)"&gt;${esc(S.manifesto)}&lt;/textarea&gt;&lt;div class="hint"&gt;Boş satır = yeni paragraf. Tamamı BÜYÜK HARF satır = başlık.&lt;/div&gt;`,[{label:'KAYDET',cls:'gold',act:'manSave'},{label:'VARSAYILAN A5 METNİNE DÖN',act:'manDef'}]),
-manSave:()=&gt;{S.manifesto=$('#mTxt').value.trim()||DEFAULT_MANIFESTO;save();closeSheet();toast('Manifesto kaydedildi');},
-manDef:()=&gt;{if(confirm('Varsayılan A5 metnine dönülsün mü?')){S.manifesto=DEFAULT_MANIFESTO;save();closeSheet();}},
-breath:()=&gt;{Object.assign(B,{run:false,acc:0,ph:-1,saved:false});$('#brPh').textContent='HAZIR';$('#brN').textContent='4';$('#brGo').textContent='BAŞLAT';
-$$('.cb').forEach(c=&gt;c.classList.toggle('on',+c.dataset.s===B.target));brUI(0);openFs('fsBreath');},
-brDur:el=&gt;{B.target=+el.dataset.s;$$('.cb').forEach(c=&gt;c.classList.toggle('on',c===el));if(!B.run)brUI(B.acc);},
-brGo:()=&gt;{if(B.run){brPause();$('#brGo').textContent='DEVAM';$('#brPh').textContent='DURAKLATILDI';return;}
+reader:()=>{$('#rdBody').innerHTML=manHTML(S.manifesto);const r=D(U.sel).man,b=$('#rdBtn');b.className='btn '+(r?'gl':'gold');b.textContent=r?'✓ SESLİ OKUNDU VE HİZALANDI':'BUGÜN SESLİ OKUNDU VE HİZALANDI';openFs('fsRead');},
+rdClose:()=>closeFs('fsRead'),
+manEdit:()=>openSheet('MANİFESTO METNİ',`<textarea class="ta" id="mTxt" style="min-height:52vh;font-family:var(--serif)">${esc(S.manifesto)}</textarea><div class="hint">Boş satır = yeni paragraf. Tamamı BÜYÜK HARF satır = başlık.</div>`,[{label:'KAYDET',cls:'gold',act:'manSave'},{label:'VARSAYILAN A5 METNİNE DÖN',act:'manDef'}]),
+manSave:()=>{S.manifesto=$('#mTxt').value.trim()||DEFAULT_MANIFESTO;save();closeSheet();toast('Manifesto kaydedildi');},
+manDef:()=>{if(confirm('Varsayılan A5 metnine dönülsün mü?')){S.manifesto=DEFAULT_MANIFESTO;save();closeSheet();}},
+breath:()=>{Object.assign(B,{run:false,acc:0,ph:-1,saved:false});$('#brPh').textContent='HAZIR';$('#brN').textContent='4';$('#brGo').textContent='BAŞLAT';
+$$('.cb').forEach(c=>c.classList.toggle('on',+c.dataset.s===B.target));brUI(0);openFs('fsBreath');},
+brDur:el=>{B.target=+el.dataset.s;$$('.cb').forEach(c=>c.classList.toggle('on',c===el));if(!B.run)brUI(B.acc);},
+brGo:()=>{if(B.run){brPause();$('#brGo').textContent='DEVAM';$('#brPh').textContent='DURAKLATILDI';return;}
 if(B.saved)Object.assign(B,{acc:0,ph:-1,saved:false});B.run=true;B.t0=performance.now();getLock();$('#brGo').textContent='DURAKLAT';brLoop();},
-brEnd:()=&gt;{brPause();const a=B.acc,was=B.saved;brSave(false);closeFs('fsBreath');renderHabits();if(!was&amp;&amp;a&gt;=20000)toast('Nefes seansı kaydedildi: '+dur(a/60000));},
-timerStart:()=&gt;{if(S.timer)return;S.timer={start:Date.now(),day:todayKey()};save();buzz(20);renderTimer();renderHabits();toast('Odak sayacı başladı — tek cephe: DGS Matematik');},
-timerStop:()=&gt;{if(!S.timer)return;let m=Math.floor((Date.now()-S.timer.start)/60000);
-if(m&gt;240){const r=prompt('Sayaç uzun süredir açık ('+dur(m)+'). Kaydedilecek dakika:',String(m));if(r===null)return;m=Math.max(0,parseInt(r,10)||0);}
-const k=S.timer.day;S.timer=null;if(m&gt;0){const d=DW(k);d.math=(+d.math||0)+m;d.ses=(d.ses||0)+1;}save();renderAll();toast(m&gt;0?'+'+dur(m)+' odaklı matematik kaydedildi':'1 dakikadan kısa — kaydedilmedi');},
-timerCancel:()=&gt;{if(S.timer&amp;&amp;confirm('Sayaç kaydedilmeden iptal edilsin mi?')){S.timer=null;save();renderTimer();renderHabits();}},
-cut:()=&gt;{const d=DW(todayKey());d.cut=(+d.cut||0)+1;save();buzz(10);renderHabits();},
-cutMinus:()=&gt;{const d=DW(todayKey());if(d.cut&gt;0){d.cut--;save();renderHabits();}},
-qk:el=&gt;{if(U.sel&gt;todayKey())return;const f=el.dataset.f;setMetric(f,Math.max(0,(+D(U.sel)[f]||0)+ +el.dataset.n),true);buzz(8);},
-wPrev:()=&gt;{U.rw=addDays(U.rw,-7);renderRapor();},wNext:()=&gt;{U.rw=addDays(U.rw,7);renderRapor();},
-slStart:()=&gt;{if(S.sleep){openSleepFs();return;}const T=todayKey(),d=D(T);if(!sleepH())return;
-if(!slWin(120)&amp;&amp;!confirm('Şu an karartma saati değil. Yine de başlatılsın mı?'))return;
-if(d.sl&amp;&amp;d.sl.off&amp;&amp;!confirm('Bu gecenin kaydı zaten var. Yeni karartma başlatılsın mı?'))return;
+brEnd:()=>{brPause();const a=B.acc,was=B.saved;brSave(false);closeFs('fsBreath');renderHabits();if(!was&&a>=20000)toast('Nefes seansı kaydedildi: '+dur(a/60000));},
+timerStart:()=>{if(S.timer)return;S.timer={start:Date.now(),day:todayKey()};save();buzz(20);renderTimer();renderHabits();toast('Odak sayacı başladı — tek cephe: DGS Matematik');},
+timerStop:()=>{if(!S.timer)return;let m=Math.floor((Date.now()-S.timer.start)/60000);
+if(m>240){const r=prompt('Sayaç uzun süredir açık ('+dur(m)+'). Kaydedilecek dakika:',String(m));if(r===null)return;m=Math.max(0,parseInt(r,10)||0);}
+const k=S.timer.day;S.timer=null;if(m>0){const d=DW(k);d.math=(+d.math||0)+m;d.ses=(d.ses||0)+1;}save();renderAll();toast(m>0?'+'+dur(m)+' odaklı matematik kaydedildi':'1 dakikadan kısa — kaydedilmedi');},
+timerCancel:()=>{if(S.timer&&confirm('Sayaç kaydedilmeden iptal edilsin mi?')){S.timer=null;save();renderTimer();renderHabits();}},
+cut:()=>{const d=DW(todayKey());d.cut=(+d.cut||0)+1;save();buzz(10);renderHabits();},
+cutMinus:()=>{const d=DW(todayKey());if(d.cut>0){d.cut--;save();renderHabits();}},
+qk:el=>{if(U.sel>todayKey())return;const f=el.dataset.f;setMetric(f,Math.max(0,(+D(U.sel)[f]||0)+ +el.dataset.n),true);buzz(8);},
+wPrev:()=>{U.rw=addDays(U.rw,-7);renderRapor();},wNext:()=>{U.rw=addDays(U.rw,7);renderRapor();},
+slStart:()=>{if(S.sleep){openSleepFs();return;}const T=todayKey(),d=D(T);if(!sleepH())return;
+if(!slWin(120)&&!confirm('Şu an karartma saati değil. Yine de başlatılsın mı?'))return;
+if(d.sl&&d.sl.off&&!confirm('Bu gecenin kaydı zaten var. Yeni karartma başlatılsın mı?'))return;
 S.sleep={off:Date.now(),day:T};save();buzz([20,60,20]);renderAll();openSleepFs();},
-slOpen:()=&gt;openSleepFs(),
-slClose:()=&gt;closeSleepFs(),
-slCancel:()=&gt;{if(!S.sleep||!confirm('Karartma kaydı iptal edilsin mi?'))return;S.sleep=null;save();closeSleepFs();renderAll();},
-slWake:()=&gt;{const s=S.sleep,h=sleepH();if(!s||!h)return;const el=Date.now()-s.off;
-if(el&lt;36e5&amp;&amp;!confirm('Karartma '+dur(el/6e4)+' önce başladı. Uyanış şimdi kaydedilsin mi?'))return;
-const d=DW(s.day);d.sl=Object.assign({br:0,q:0},d.sl||{},{off:s.off,wake:el&gt;16*36e5?0:Date.now()});d.h=d.h||{};
+slOpen:()=>openSleepFs(),
+slClose:()=>closeSleepFs(),
+slCancel:()=>{if(!S.sleep||!confirm('Karartma kaydı iptal edilsin mi?'))return;S.sleep=null;save();closeSleepFs();renderAll();},
+slWake:()=>{const s=S.sleep,h=sleepH();if(!s||!h)return;const el=Date.now()-s.off;
+if(el<36e5&&!confirm('Karartma '+dur(el/6e4)+' önce başladı. Uyanış şimdi kaydedilsin mi?'))return;
+const d=DW(s.day);d.sl=Object.assign({br:0,q:0},d.sl||{},{off:s.off,wake:el>16*36e5?0:Date.now()});d.h=d.h||{};
 if(d.h[h.id]===undefined){d.h[h.id]=slSug(h,s.off,+d.sl.br||0);d.sl.auto=1;}
 S.sleep=null;save();buzz([15,60,15]);closeSleepFs();renderAll();openSlReport(s.day);},
-slEdit:el=&gt;openSlReport(el.dataset.k),
-slBr:el=&gt;{const f=U.slf;if(!f)return;f.br=Math.max(0,Math.min(20,f.br+ +el.dataset.n));slfPaint();},
-slQ:el=&gt;{const f=U.slf;if(!f)return;const n=+el.dataset.n;f.q=f.q===n?0:n;slfPaint();},
-slV:el=&gt;{const f=U.slf;if(!f)return;f.v=+el.dataset.v;f.vm=true;slfPaint();},
-slSave:()=&gt;{const f=U.slf,h=sleepH();if(!f||!h)return;const a=$('#slOff'),b=$('#slWake');if(a)f.off=a.value;if(b)f.wake=b.value;
+slEdit:el=>openSlReport(el.dataset.k),
+slBr:el=>{const f=U.slf;if(!f)return;f.br=Math.max(0,Math.min(20,f.br+ +el.dataset.n));slfPaint();},
+slQ:el=>{const f=U.slf;if(!f)return;const n=+el.dataset.n;f.q=f.q===n?0:n;slfPaint();},
+slV:el=>{const f=U.slf;if(!f)return;f.v=+el.dataset.v;f.vm=true;slfPaint();},
+slSave:()=>{const f=U.slf,h=sleepH();if(!f||!h)return;const a=$('#slOff'),b=$('#slWake');if(a)f.off=a.value;if(b)f.wake=b.value;
 const off=offTsOf(f.k,f.off);if(!off){toast('Işıkların kapandığı saati gir');return;}
 const wake=f.wake?afterTs(off,f.wake):0;if(!f.vm)f.v=slSug(h,off,f.br);
 const d=DW(f.k);d.sl={off,wake,br:f.br,q:f.q};d.h=d.h||{};d.h[h.id]=f.v;
-if(S.sleep&amp;&amp;S.sleep.day===f.k)S.sleep=null;save();closeSheet();renderAll();toast('Gece raporu kaydedildi · '+VL[f.v]);},
-slDel:()=&gt;{const f=U.slf,h=sleepH();if(!f||!confirm('Bu gecenin kaydı silinsin mi?'))return;const d=DW(f.k);if(d.sl&amp;&amp;d.sl.auto&amp;&amp;d.h&amp;&amp;h)delete d.h[h.id];delete d.sl;save();closeSheet();renderAll();toast('Gece kaydı silindi');},
-hEdit:el=&gt;{const h=S.habits.find(x=&gt;x.id===el.dataset.h);if(!h)return;const u=h.metric==='math'?'dk':'sayfa',isS=h.tool==='sleep';
-openSheet(up(h.identity),`&lt;label class="fl"&gt;Kimlik&lt;/label&gt;&lt;input class="inp" id="eI" value="${esc(h.identity)}"&gt;&lt;label class="fl"&gt;Saat bloğu&lt;/label&gt;&lt;input class="inp" id="eT" value="${esc(h.time)}"&gt;&lt;div class="hint"&gt;${isS?'"23:00 – 07:00" biçimi: ilk saat karartma hedefidir, gece yarısını geçebilir.':'"09:00 – 12:00" biçimi Aktif Cephe takibinde kullanılır.'}&lt;/div&gt;
-&lt;label class="fl"&gt;Aksiyon&lt;/label&gt;&lt;input class="inp" id="eA" value="${esc(h.action)}"&gt;&lt;label class="fl"&gt;Tam Hedef&lt;/label&gt;&lt;textarea class="ta" id="eF"&gt;${esc(h.full)}&lt;/textarea&gt;
-&lt;label class="fl"&gt;Minimum Alt Sınır&lt;/label&gt;&lt;textarea class="ta" id="eM"&gt;${esc(h.min)}&lt;/textarea&gt;&lt;label class="fl"&gt;Denetim Kriteri&lt;/label&gt;&lt;input class="inp" id="eD" value="${esc(h.audit)}"&gt;
-&lt;label class="fl"&gt;Alt Kontrol Maddeleri &lt;small&gt;(her satır bir madde)&lt;/small&gt;&lt;/label&gt;&lt;textarea class="ta" id="eS"&gt;${esc(h.subs.join('\n'))}&lt;/textarea&gt;
-${h.metric?`&lt;div class="row2"&gt;&lt;div&gt;&lt;label class="fl"&gt;MİN eşiği (${u})&lt;/label&gt;&lt;input class="inp" id="e1" type="number" inputmode="numeric" value="${h.mMin}"&gt;&lt;/div&gt;&lt;div&gt;&lt;label class="fl"&gt;TAM eşiği (${u})&lt;/label&gt;&lt;input class="inp" id="e2" type="number" inputmode="numeric" value="${h.mFull}"&gt;&lt;/div&gt;&lt;/div&gt;`:''}
-${isS?`&lt;div class="row2"&gt;&lt;div&gt;&lt;label class="fl"&gt;TAM toleransı (dk)&lt;/label&gt;&lt;input class="inp" id="e3" type="number" inputmode="numeric" value="${tolT(h)}"&gt;&lt;/div&gt;&lt;div&gt;&lt;label class="fl"&gt;MİN toleransı (dk)&lt;/label&gt;&lt;input class="inp" id="e4" type="number" inputmode="numeric" value="${tolM(h)}"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hint"&gt;TAM: hedef + tolerans içinde ve ihlalsiz. MİN: en fazla 1 ihlal.&lt;/div&gt;`:''}`,[{label:'KAYDET',cls:'gold',act:'hSave',id:h.id}]);},
-hSave:el=&gt;{const h=S.habits.find(x=&gt;x.id===el.dataset.id);if(!h)return;const v=i=&gt;$('#'+i).value.trim();
-h.identity=v('eI')||h.identity;h.time=v('eT');h.action=v('eA');h.full=v('eF');h.min=v('eM');h.audit=v('eD');h.subs=$('#eS').value.split('\n').map(x=&gt;x.trim()).filter(Boolean);
+if(S.sleep&&S.sleep.day===f.k)S.sleep=null;save();closeSheet();renderAll();toast('Gece raporu kaydedildi · '+VL[f.v]);},
+slDel:()=>{const f=U.slf,h=sleepH();if(!f||!confirm('Bu gecenin kaydı silinsin mi?'))return;const d=DW(f.k);if(d.sl&&d.sl.auto&&d.h&&h)delete d.h[h.id];delete d.sl;save();closeSheet();renderAll();toast('Gece kaydı silindi');},
+hEdit:el=>{const h=S.habits.find(x=>x.id===el.dataset.h);if(!h)return;const u=h.metric==='math'?'dk':'sayfa',isS=h.tool==='sleep';
+openSheet(up(h.identity),`<label class="fl">Kimlik</label><input class="inp" id="eI" value="${esc(h.identity)}"><label class="fl">Saat bloğu</label><input class="inp" id="eT" value="${esc(h.time)}"><div class="hint">${isS?'"23:00 – 07:00" biçimi: ilk saat karartma hedefidir, gece yarısını geçebilir.':'"09:00 – 12:00" biçimi Aktif Cephe takibinde kullanılır.'}</div>
+<label class="fl">Aksiyon</label><input class="inp" id="eA" value="${esc(h.action)}"><label class="fl">Tam Hedef</label><textarea class="ta" id="eF">${esc(h.full)}</textarea>
+<label class="fl">Minimum Alt Sınır</label><textarea class="ta" id="eM">${esc(h.min)}</textarea><label class="fl">Denetim Kriteri</label><input class="inp" id="eD" value="${esc(h.audit)}">
+<label class="fl">Alt Kontrol Maddeleri <small>(her satır bir madde)</small></label><textarea class="ta" id="eS">${esc(h.subs.join('\n'))}</textarea>
+${h.metric?`<div class="row2"><div><label class="fl">MİN eşiği (${u})</label><input class="inp" id="e1" type="number" inputmode="numeric" value="${h.mMin}"></div><div><label class="fl">TAM eşiği (${u})</label><input class="inp" id="e2" type="number" inputmode="numeric" value="${h.mFull}"></div></div>`:''}
+${isS?`<div class="row2"><div><label class="fl">TAM toleransı (dk)</label><input class="inp" id="e3" type="number" inputmode="numeric" value="${tolT(h)}"></div><div><label class="fl">MİN toleransı (dk)</label><input class="inp" id="e4" type="number" inputmode="numeric" value="${tolM(h)}"></div></div><div class="hint">TAM: hedef + tolerans içinde ve ihlalsiz. MİN: en fazla 1 ihlal.</div>`:''}`,[{label:'KAYDET',cls:'gold',act:'hSave',id:h.id}]);},
+hSave:el=>{const h=S.habits.find(x=>x.id===el.dataset.id);if(!h)return;const v=i=>$('#'+i).value.trim();
+h.identity=v('eI')||h.identity;h.time=v('eT');h.action=v('eA');h.full=v('eF');h.min=v('eM');h.audit=v('eD');h.subs=$('#eS').value.split('\n').map(x=>x.trim()).filter(Boolean);
 if(h.metric){h.mMin=Math.max(0,parseInt(v('e1'),10)||0);h.mFull=Math.max(0,parseInt(v('e2'),10)||0);}
 if(h.tool==='sleep'){h.tolT=Math.max(0,parseInt(v('e3'),10)||0);h.tolM=Math.max(h.tolT,parseInt(v('e4'),10)||0);}
 save();closeSheet();renderAll();toast('Alışkanlık güncellendi');},
-hReset:()=&gt;{if(confirm('Tüm alışkanlıklar Faz 1 varsayılan metinlerine dönsün mü? (Günlük kayıtlar korunur)')){S.habits=clone(DEFAULT_HABITS);save();renderAll();}},
-bAdd:()=&gt;{const t=$('#nbT').value.trim(),p=Math.max(0,parseInt($('#nbP').value,10)||0);if(!t){toast('Kitap adı gir');return;}
-const b={id:'b'+Date.now().toString(36),title:t,total:p,start:0,done:false},fi=S.books.findIndex(x=&gt;x.final&amp;&amp;!x.done);
-if(fi&gt;=0)S.books.splice(fi,0,b);else S.books.push(b);save();renderAyar();toast('Eritme listesine eklendi');},
-bUp:el=&gt;{const i=S.books.findIndex(b=&gt;b.id===el.dataset.id);if(i&gt;0){const[b]=S.books.splice(i,1);S.books.splice(i-1,0,b);save();renderAyar();}},
-bEdit:el=&gt;{const b=S.books.find(x=&gt;x.id===el.dataset.id);if(!b)return;
-openSheet('KİTAP',`&lt;label class="fl"&gt;Kitap adı&lt;/label&gt;&lt;input class="inp" id="ebT" value="${esc(b.title)}"&gt;&lt;div class="row2"&gt;&lt;div&gt;&lt;label class="fl"&gt;Toplam sayfa&lt;/label&gt;&lt;input class="inp" id="ebP" type="number" inputmode="numeric" value="${b.total||''}"&gt;&lt;/div&gt;&lt;div&gt;&lt;label class="fl"&gt;Önceden okunan&lt;/label&gt;&lt;input class="inp" id="ebS" type="number" inputmode="numeric" value="${b.start||''}"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hint"&gt;${bookLine(b)}&lt;/div&gt;`,
+hReset:()=>{if(confirm('Tüm alışkanlıklar Faz 1 varsayılan metinlerine dönsün mü? (Günlük kayıtlar korunur)')){S.habits=clone(DEFAULT_HABITS);save();renderAll();}},
+bAdd:()=>{const t=$('#nbT').value.trim(),p=Math.max(0,parseInt($('#nbP').value,10)||0);if(!t){toast('Kitap adı gir');return;}
+const b={id:'b'+Date.now().toString(36),title:t,total:p,start:0,done:false},fi=S.books.findIndex(x=>x.final&&!x.done);
+if(fi>=0)S.books.splice(fi,0,b);else S.books.push(b);save();renderAyar();toast('Eritme listesine eklendi');},
+bUp:el=>{const i=S.books.findIndex(b=>b.id===el.dataset.id);if(i>0){const[b]=S.books.splice(i,1);S.books.splice(i-1,0,b);save();renderAyar();}},
+bEdit:el=>{const b=S.books.find(x=>x.id===el.dataset.id);if(!b)return;
+openSheet('KİTAP',`<label class="fl">Kitap adı</label><input class="inp" id="ebT" value="${esc(b.title)}"><div class="row2"><div><label class="fl">Toplam sayfa</label><input class="inp" id="ebP" type="number" inputmode="numeric" value="${b.total||''}"></div><div><label class="fl">Önceden okunan</label><input class="inp" id="ebS" type="number" inputmode="numeric" value="${b.start||''}"></div></div><div class="hint">${bookLine(b)}</div>`,
 [{label:'KAYDET',cls:'gold',act:'bSave',id:b.id},{label:b.done?'TEKRAR AKTİF YAP':'ERİTİLDİ OLARAK İŞARETLE',act:'bToggle',id:b.id},{label:'LİSTEDEN SİL',cls:'red',act:'bDel',id:b.id}]);},
-bSave:el=&gt;{const b=S.books.find(x=&gt;x.id===el.dataset.id);if(!b)return;b.title=$('#ebT').value.trim()||b.title;b.total=Math.max(0,parseInt($('#ebP').value,10)||0);b.start=Math.max(0,parseInt($('#ebS').value,10)||0);save();closeSheet();renderAyar();},
-bToggle:el=&gt;{const b=S.books.find(x=&gt;x.id===el.dataset.id);if(!b)return;b.done=!b.done;save();closeSheet();renderAyar();},
-bDel:el=&gt;{if(!confirm('Kitap listeden silinsin mi? (Sayfa kayıtları korunur)'))return;S.books=S.books.filter(x=&gt;x.id!==el.dataset.id);save();closeSheet();renderAyar();},
-bookDone:el=&gt;{const b=S.books.find(x=&gt;x.id===el.dataset.id);if(!b)return;b.done=true;save();const nx=activeBook();toast('"'+b.title+'" eritildi.'+(nx?' Sıradaki: '+nx.title:''));renderAll();},
-backup:async()=&gt;{const name='karargah-yedek-'+todayKey()+'.json',json=JSON.stringify(S);let ok=false;
-try{const f=new File([json],name,{type:'application/json'});if(navigator.canShare&amp;&amp;navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});ok=true;}}catch(e){if(e&amp;&amp;e.name==='AbortError')return;}
-if(!ok){const u=URL.createObjectURL(new Blob([json],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=&gt;URL.revokeObjectURL(u),5000);}
+bSave:el=>{const b=S.books.find(x=>x.id===el.dataset.id);if(!b)return;b.title=$('#ebT').value.trim()||b.title;b.total=Math.max(0,parseInt($('#ebP').value,10)||0);b.start=Math.max(0,parseInt($('#ebS').value,10)||0);save();closeSheet();renderAyar();},
+bToggle:el=>{const b=S.books.find(x=>x.id===el.dataset.id);if(!b)return;b.done=!b.done;save();closeSheet();renderAyar();},
+bDel:el=>{if(!confirm('Kitap listeden silinsin mi? (Sayfa kayıtları korunur)'))return;S.books=S.books.filter(x=>x.id!==el.dataset.id);save();closeSheet();renderAyar();},
+bookDone:el=>{const b=S.books.find(x=>x.id===el.dataset.id);if(!b)return;b.done=true;save();const nx=activeBook();toast('"'+b.title+'" eritildi.'+(nx?' Sıradaki: '+nx.title:''));renderAll();},
+backup:async()=>{const name='karargah-yedek-'+todayKey()+'.json',json=JSON.stringify(S);let ok=false;
+try{const f=new File([json],name,{type:'application/json'});if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});ok=true;}}catch(e){if(e&&e.name==='AbortError')return;}
+if(!ok){const u=URL.createObjectURL(new Blob([json],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),5000);}
 S.lastBackup=Date.now();save();renderAyar();updateDot();toast('Yedek hazırlandı');},
-copy:async()=&gt;{const j=JSON.stringify(S);try{await navigator.clipboard.writeText(j);S.lastBackup=Date.now();save();renderAyar();updateDot();toast('Yedek panoya kopyalandı — Notlar’a yapıştırıp sakla');}
-catch(e){openSheet('YEDEK METNİ',`&lt;textarea class="ta" style="min-height:40vh" readonly&gt;${esc(j)}&lt;/textarea&gt;&lt;div class="hint"&gt;Metni seçip kopyala.&lt;/div&gt;`,[]);}},
-imp:()=&gt;$('#impFile').click(),
-paste:()=&gt;openSheet('METİNDEN GERİ YÜKLE','&lt;textarea class="ta" id="pTxt" style="min-height:40vh" placeholder="Yedek JSON metnini yapıştır"&gt;&lt;/textarea&gt;',[{label:'GERİ YÜKLE',cls:'gold',act:'pasteGo'}]),
-pasteGo:()=&gt;doImport($('#pTxt').value),
-wipe:()=&gt;{if(!confirm('TÜM veriler silinecek. Önce yedek aldın mı?')||!confirm('Son onay: geri dönüşü yok. Silinsin mi?'))return;S=fresh();save();U.today=todayKey();goDay(U.today);renderAll();toast('Sıfırlandı');},
+copy:async()=>{const j=JSON.stringify(S);try{await navigator.clipboard.writeText(j);S.lastBackup=Date.now();save();renderAyar();updateDot();toast('Yedek panoya kopyalandı — Notlar’a yapıştırıp sakla');}
+catch(e){openSheet('YEDEK METNİ',`<textarea class="ta" style="min-height:40vh" readonly>${esc(j)}</textarea><div class="hint">Metni seçip kopyala.</div>`,[]);}},
+imp:()=>$('#impFile').click(),
+paste:()=>openSheet('METİNDEN GERİ YÜKLE','<textarea class="ta" id="pTxt" style="min-height:40vh" placeholder="Yedek JSON metnini yapıştır"></textarea>',[{label:'GERİ YÜKLE',cls:'gold',act:'pasteGo'}]),
+pasteGo:()=>doImport($('#pTxt').value),
+wipe:()=>{if(!confirm('TÜM veriler silinecek. Önce yedek aldın mı?')||!confirm('Son onay: geri dönüşü yok. Silinsin mi?'))return;S=fresh();save();U.today=todayKey();goDay(U.today);renderAll();toast('Sıfırlandı');},
 shClose:closeSheet};
 
 /* ---------- olaylar ---------- */
-const coarse=window.matchMedia&amp;&amp;matchMedia('(pointer: coarse)').matches;
-document.addEventListener('click',e=&gt;{const t=e.target;if(t.id==='sheet'){closeSheet();return;}
-if(t.classList&amp;&amp;t.classList.contains('dp')){if(!coarse&amp;&amp;t.showPicker)try{t.showPicker();}catch(_){}return;}
-const el=t.closest&amp;&amp;t.closest('[data-act]');if(!el||el.disabled)return;const f=A[el.dataset.act];if(f)f(el,e);});
-const slIn=el=&gt;{if(el.id!=='slOff'&amp;&amp;el.id!=='slWake')return false;if(U.slf){U.slf[el.id==='slOff'?'off':'wake']=el.value;slfPaint();}return true;};
-document.addEventListener('input',e=&gt;{const el=e.target;if(slIn(el))return;const f=el.dataset&amp;&amp;el.dataset.f;if(!f||U.sel&gt;todayKey())return;
+const coarse=window.matchMedia&&matchMedia('(pointer: coarse)').matches;
+document.addEventListener('click',e=>{const t=e.target;if(t.id==='sheet'){closeSheet();return;}
+if(t.classList&&t.classList.contains('dp')){if(!coarse&&t.showPicker)try{t.showPicker();}catch(_){}return;}
+const el=t.closest&&t.closest('[data-act]');if(!el||el.disabled)return;const f=A[el.dataset.act];if(f)f(el,e);});
+const slIn=el=>{if(el.id!=='slOff'&&el.id!=='slWake')return false;if(U.slf){U.slf[el.id==='slOff'?'off':'wake']=el.value;slfPaint();}return true;};
+document.addEventListener('input',e=>{const el=e.target;if(slIn(el))return;const f=el.dataset&&el.dataset.f;if(!f||U.sel>todayKey())return;
 if(f==='note'){DW(U.sel).note=el.value.slice(0,4000);save();return;}
-let v=parseInt(el.value,10);if(isNaN(v)||v&lt;0)v=0;setMetric(f,Math.min(v,f==='math'?1440:5000),false);});
-document.addEventListener('change',e=&gt;{const el=e.target;if(slIn(el))return;
+let v=parseInt(el.value,10);if(isNaN(v)||v<0)v=0;setMetric(f,Math.min(v,f==='math'?1440:5000),false);});
+document.addEventListener('change',e=>{const el=e.target;if(slIn(el))return;
 if(el.classList.contains('dp')){if(el.value){goDay(el.value);renderOp();}return;}
-if(el.id==='impFile'){const f=el.files&amp;&amp;el.files[0];if(f){const r=new FileReader();r.onload=()=&gt;doImport(String(r.result));r.readAsText(f);}el.value='';return;}
+if(el.id==='impFile'){const f=el.files&&el.files[0];if(f){const r=new FileReader();r.onload=()=>doImport(String(r.result));r.readAsText(f);}el.value='';return;}
 const k=el.dataset.set;if(!k)return;
 if(k==='start'){if(!/^\d{4}-\d{2}-\d{2}$/.test(el.value))return;S.settings.start=el.value;}
 if(k==='length')S.settings.length=Math.min(365,Math.max(7,parseInt(el.value,10)||60));
 if(k==='rollover')S.settings.rollover=parseInt(el.value,10)||0;
 save();U.today=todayKey();goDay(U.today);U.rw=null;renderHeader();renderAyar();toast('Kamp ayarı güncellendi');});
-document.addEventListener('keydown',e=&gt;{if(e.key==='Escape'){closeSheet();closeFs('fsRead');closeSleepFs();}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSheet();closeFs('fsRead');closeSleepFs();}});
 function checkDay(){const T=todayKey();
 if(T!==U.today){const was=U.sel===U.today;U.today=T;if(was)goDay(T);renderAll();return;}
 renderSleepBar();
-if(U.tab==='op'&amp;&amp;U.sel===T){const f=front(),sig=f?f.mode+f.h.id:'';renderFront();if(sig!==U.frontSig)renderHabits();}}
+if(U.tab==='op'&&U.sel===T){const f=front(),sig=f?f.mode+f.h.id:'';renderFront();if(sig!==U.frontSig)renderHabits();}}
 setInterval(tick,1000);setInterval(checkDay,30000);
-document.addEventListener('visibilitychange',()=&gt;{if(!document.hidden){checkDay();tick();if(S.sleep&amp;&amp;!slFsOn())openSleepFs();}});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){checkDay();tick();if(S.sleep&&!slFsOn())openSleepFs();}});
 
 /* ---------- ana ekran / PWA ---------- */
 function drawIcon(sz){const c=document.createElement('canvas');c.width=c.height=sz;const x=c.getContext('2d'),u=sz/512;
 x.fillStyle='#0d0f12';x.fillRect(0,0,sz,sz);x.strokeStyle='#d4af37';x.lineWidth=10*u;x.strokeRect(72*u,72*u,368*u,368*u);
-x.lineWidth=34*u;x.lineJoin='miter';[0,1,2].forEach(i=&gt;{const y=(162+i*62)*u;x.beginPath();x.moveTo(156*u,y+64*u);x.lineTo(256*u,y);x.lineTo(356*u,y+64*u);x.stroke();});
+x.lineWidth=34*u;x.lineJoin='miter';[0,1,2].forEach(i=>{const y=(162+i*62)*u;x.beginPath();x.moveTo(156*u,y+64*u);x.lineTo(256*u,y);x.lineTo(356*u,y+64*u);x.stroke();});
 return c.toDataURL('image/png');}
-function pwa(){try{const add=(r,h)=&gt;{const l=document.createElement('link');l.rel=r;l.href=h;document.head.appendChild(l);};
+function pwa(){try{const add=(r,h)=>{const l=document.createElement('link');l.rel=r;l.href=h;document.head.appendChild(l);};
 const i180=drawIcon(180),i192=drawIcon(192),i512=drawIcon(512);add('apple-touch-icon',i180);add('icon',i192);
 if(/^https?:$/.test(location.protocol)){const base=location.href.split('#')[0].split('?')[0];
 const m={name:'Karargâh · Faz 1',short_name:'Karargâh',start_url:base,scope:base.slice(0,base.lastIndexOf('/')+1),display:'standalone',background_color:'#0d0f12',theme_color:'#0d0f12',lang:'tr',
 icons:[{src:i192,sizes:'192x192',type:'image/png'},{src:i512,sizes:'512x512',type:'image/png'}]};
 add('manifest',URL.createObjectURL(new Blob([JSON.stringify(m)],{type:'application/manifest+json'})));
-if('serviceWorker'in navigator&amp;&amp;location.protocol==='https:')navigator.serviceWorker.register('sw.js').catch(()=&gt;{});}
-if(navigator.storage&amp;&amp;navigator.storage.persist)navigator.storage.persist().catch(()=&gt;{});}catch(e){}}
+if('serviceWorker'in navigator&&location.protocol==='https:')navigator.serviceWorker.register('sw.js').catch(()=>{});}
+if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});}catch(e){}}
 
 /* ---------- başlat ---------- */
 U.today=todayKey();goDay(U.today);pwa();renderAll();
-const KR=`&lt;p&gt;&lt;b&gt;Karartma (${hm(slTarget(sleepH()))}):&lt;/b&gt; Işıkları ve ekranları kapatırken KARARTMAYI BAŞLAT'a dokun, telefonu uzağa koy. Sabah UYANDIM de; karartma saati, süre ve değerlendirme kaydedilir. Telefona hiç dokunmadan uyuduysan sabah "Dün gecenin kaydını gir".&lt;/p&gt;`;
-if(!S.onb){S.onb=2;save();openSheet('FAZ 1 KAMPI BAŞLADI',`&lt;div class="txt"&gt;&lt;p&gt;&lt;b&gt;Başlangıç: ${dateLong(S.settings.start)}.&lt;/b&gt; Farklı bir tarihte başladıysan Ayarlar'dan değiştir.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Her cephede 3 emir:&lt;/b&gt; TAM HEDEF (%100) · MİNİMUM (%50, seri korunur) · YAPILMADI (seri sıfırlanır). Aynı butona tekrar dokunmak işareti kaldırır.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Kural:&lt;/b&gt; Bir gün aksarsa ertesi gün o kartta kırmızı uyarı çıkar. İki gün üst üste aksatma yok.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Eritme Listesi:&lt;/b&gt; Eldeki kitaplarını Ayarlar'dan sırayla ekle; Napolyon biyografisi hedef olarak sonda bekliyor.&lt;/p&gt;${KR}&lt;/div&gt;`,[{label:'KARARGÂHA GİR',cls:'gold',act:'shClose'}]);}
-else if(S.onb&lt;2){S.onb=2;save();openSheet('YENİ CEPHE: KARARTMA',`&lt;div class="txt"&gt;${KR}&lt;p&gt;Karartma Raporu Rapor sekmesinde; toleranslar Ayarlar › Alışkanlıklar bölümünde.&lt;/p&gt;&lt;/div&gt;`,[{label:'ANLAŞILDI',cls:'gold',act:'shClose'}]);}
+const KR=`<p><b>Karartma (${hm(slTarget(sleepH()))}):</b> Işıkları ve ekranları kapatırken KARARTMAYI BAŞLAT'a dokun, telefonu uzağa koy. Sabah UYANDIM de; karartma saati, süre ve değerlendirme kaydedilir. Telefona hiç dokunmadan uyuduysan sabah "Dün gecenin kaydını gir".</p>`;
+if(!S.onb){S.onb=2;save();openSheet('FAZ 1 KAMPI BAŞLADI',`<div class="txt"><p><b>Başlangıç: ${dateLong(S.settings.start)}.</b> Farklı bir tarihte başladıysan Ayarlar'dan değiştir.</p>
+<p><b>Her cephede 3 emir:</b> TAM HEDEF (%100) · MİNİMUM (%50, seri korunur) · YAPILMADI (seri sıfırlanır). Aynı butona tekrar dokunmak işareti kaldırır.</p>
+<p><b>Kural:</b> Bir gün aksarsa ertesi gün o kartta kırmızı uyarı çıkar. İki gün üst üste aksatma yok.</p>
+<p><b>Eritme Listesi:</b> Eldeki kitaplarını Ayarlar'dan sırayla ekle; Napolyon biyografisi hedef olarak sonda bekliyor.</p>${KR}</div>`,[{label:'KARARGÂHA GİR',cls:'gold',act:'shClose'}]);}
+else if(S.onb<2){S.onb=2;save();openSheet('YENİ CEPHE: KARARTMA',`<div class="txt">${KR}<p>Karartma Raporu Rapor sekmesinde; toleranslar Ayarlar › Alışkanlıklar bölümünde.</p></div>`,[{label:'ANLAŞILDI',cls:'gold',act:'shClose'}]);}
 if(S.sleep)openSleepFs();
 })();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+</script>
+</body>
+</html>
